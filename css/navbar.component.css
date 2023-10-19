@@ -30,6 +30,13 @@ body {
   color: black;
   text-decoration: none;
   margin: 10px;
+  padding: 10px;
+  white-space: nowrap;
+  /* Styles for left side links on hover */
+}
+.navbar .navbar-left .navbar-left__link:hover {
+  background-color: #537FE7;
+  border-radius: 10px;
 }
 .navbar .navbar-right {
   display: flex;
@@ -43,7 +50,13 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
+  padding: 10px;
+  /* Styles for right side links on hover */
   /* Styles for the icons on the right side of the navigation bar */
+}
+.navbar .navbar-right .navbar-right__link:hover {
+  background-color: #537FE7;
+  border-radius: 10px;
 }
 .navbar .navbar-right .navbar-right__link .navbar-right__icon {
   margin: 5px;

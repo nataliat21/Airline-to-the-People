@@ -17,6 +17,14 @@
       color: $primary-text-color;
       text-decoration: none;
       margin: 10px;
+      padding: 10px;
+      white-space: nowrap;
+
+      /* Styles for left side links on hover */
+      &:hover{
+        background-color: $hover-color-navigation-bar;
+        border-radius: 10px;
+      }
     }
   }
 
@@ -33,6 +41,13 @@
       text-decoration: none;
       display: flex;
       align-items: center;
+      padding: 10px;
+
+      /* Styles for right side links on hover */
+      &:hover{
+        background-color: $hover-color-navigation-bar;
+        border-radius: 10px;
+      }
 
       /* Styles for the icons on the right side of the navigation bar */
       .navbar-right__icon{
