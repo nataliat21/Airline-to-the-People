@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* Import of the variables and mixins used in each of the component style sheets.*/
+@import '../src/app/core/mixins.scss';
+@import '../src/app/core/variables.scss';
+
 /* Custom website font */
 @font-face {
   font-family: 'Roboto Regular';
