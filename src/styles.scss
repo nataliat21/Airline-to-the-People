@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Custom website font */
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('../src/assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+
+/* Global styles for the body tag */
+body{
+  font-family: 'Roboto Regular', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
