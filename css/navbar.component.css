@@ -1,10 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 /* Import of the variables and mixins used in each of the component style sheets.*/
 /* Mixin that applies the flexbox property and modifies the value of the align property */
+/*Mixin to set flex align and justification*/
 /* Mixin to set position, left, transform, background color, and border radius properties*/
 /*Mixin to set flex direction and justification*/
 /* Mixin to set background color and border radius*/
-/* Mixin that changes the color of the letter and the decoration of the text*/
+/* Mixin to set the color of the letter and the decoration of the text*/
+/* Mixin to set width and height*/
+/* Mixin to set the type of container position, the property left, top and background color */
 /* Custom website font */
 @font-face {
   font-family: "Roboto Regular";
@@ -24,6 +27,8 @@ body {
   grid-template-columns: 1fr 1fr;
   /* Styles for the left part of the navigation bar */
   /* Styles for the right part of the navigation bar */
+  /* Styles to hide the mobile version of the navigation bar */
+  /* Styles to hide the mobile version of the menu */
 }
 .navbar .navbar-left {
   display: flex;
@@ -78,6 +83,9 @@ body {
   margin-bottom: 8px;
   font-size: 15px;
 }
+.navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal .navbar-left-modal__link:hover {
+  color: #537FE7;
+}
 .navbar .navbar-right {
   display: flex;
   align-items: center;
@@ -100,4 +108,117 @@ body {
 }
 .navbar .navbar-right .navbar-right__link .navbar-right__icon {
   margin: 5px;
+}
+.navbar .navbar-mobile {
+  display: none;
+}
+.navbar .navbar-mobile-menu {
+  display: none;
+}
+
+@media (min-width: 280px) and (max-width: 912px) {
+  /* Styles for the navigation bar in mobile view */
+  .navbar {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    height: 60px;
+    /* Styles for left and right navigation bar elements on mobile */
+    /* Styles for the container of the mobile version of the navigation bar */
+    /* Mobile menu style */
+    /* Mobile information container style */
+  }
+  .navbar .navbar-left,
+  .navbar .navbar-right {
+    display: none;
+  }
+  .navbar .navbar-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+  }
+  .navbar .navbar-mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* Menu icon bar style */
+    /* Container style for mobile menu links */
+  }
+  .navbar .navbar-mobile-menu .navbar-mobile-menu-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    height: 60px;
+  }
+  .navbar .navbar-mobile-menu .navbar-mobile-menu-links {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+    /* Style of the separator line between links */
+    /* Style of links in the mobile menu */
+  }
+  .navbar .navbar-mobile-menu .navbar-mobile-menu-links .navbar-mobile-menu-links__line {
+    width: 90%;
+  }
+  .navbar .navbar-mobile-menu .navbar-mobile-menu-links .navbar-mobile-menu-links__link {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    font-size: 15px;
+    /* Color change when hovering over links */
+  }
+  .navbar .navbar-mobile-menu .navbar-mobile-menu-links .navbar-mobile-menu-links__link:hover {
+    color: #537FE7;
+  }
+  .navbar .navbar-mobile-information {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* Information icon bar style */
+    /* Information container title style */
+    /* Container style for mobile information links */
+  }
+  .navbar .navbar-mobile-information .navbar-mobile-information-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    height: 60px;
+  }
+  .navbar .navbar-mobile-information .navbar-mobile-information__h3 {
+    margin-left: 20px;
+  }
+  .navbar .navbar-mobile-information .navbar-mobile-information-links {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+    /* Style of the links in the mobile information container */
+  }
+  .navbar .navbar-mobile-information .navbar-mobile-information-links .navbar-mobile-information-links__link {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    font-size: 15px;
+    /* Color change when hovering over links */
+  }
+  .navbar .navbar-mobile-information .navbar-mobile-information-links .navbar-mobile-information-links__link:hover {
+    color: #537FE7;
+  }
 }/*# sourceMappingURL=navbar.component.css.map */

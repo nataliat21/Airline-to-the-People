@@ -3,3 +3,9 @@
   display: grid;
   grid-template-columns: 230px 1fr;
 }
+@media (min-width: 280px) and (max-width: 912px){
+  .header-navbar__section{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

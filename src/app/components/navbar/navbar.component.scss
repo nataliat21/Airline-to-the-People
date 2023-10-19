@@ -47,6 +47,10 @@
             @include set-flex-direction-and-justify-content(column, center);
             margin-bottom: 8px;
             font-size: 15px;
+
+            &:hover{
+              color: $hover-color-navigation-bar;
+            }
           }
         }
       }
@@ -55,8 +59,7 @@
 
   /* Styles for the right part of the navigation bar */
   .navbar-right{
-    @include flex-align(center);
-    justify-content: flex-end;
+    @include set-flex-align-and-justify-content(center, flex-end);
     margin-right: 80px;
 
     /* Styles for the links on the right side of the navigation bar */
@@ -75,5 +78,122 @@
         margin: 5px;
       }
     }
+  }
+
+  /* Styles to hide the mobile version of the navigation bar */
+  .navbar-mobile{
+    display: none;
+  }
+
+  /* Styles to hide the mobile version of the menu */
+  .navbar-mobile-menu{
+    display: none;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 912px){
+  /* Styles for the navigation bar in mobile view */
+  .navbar{
+    grid-template-columns: 1fr;
+    justify-content: center;
+    height: 60px;
+
+    /* Styles for left and right navigation bar elements on mobile */
+    .navbar-left,
+    .navbar-right{
+      display: none;
+    }
+
+    /* Styles for the container of the mobile version of the navigation bar */
+    .navbar-mobile{
+      @include set-flex-align-and-justify-content(center, space-around);
+      position: relative;
+
+    }
+
+    /* Mobile menu style */
+    .navbar-mobile-menu{
+      @include set-position-top-left-and-background-color(absolute, 0, 0, white);
+      display: block;
+      @include set-width-and-height(100%,100%);
+
+
+      /* Menu icon bar style */
+      .navbar-mobile-menu-icons{
+        @include set-flex-align-and-justify-content(center, space-around);
+        background-color: white;
+        height: 60px;
+      }
+
+      /* Container style for mobile menu links */
+      .navbar-mobile-menu-links{
+        position: fixed;
+        left: 0;
+        @include set-width-and-height(100%,100%);
+        transition: 0.5s ease;
+
+        /* Style of the separator line between links */
+        .navbar-mobile-menu-links__line{
+          width: 90%;
+        }
+
+        /* Style of links in the mobile menu */
+        .navbar-mobile-menu-links__link{
+          @include set-color-font-and-text-decoration($primary-text-color, none);
+          display: flex;
+          flex-direction: column;
+          margin: 20px;
+          font-size: 15px;
+
+          /* Color change when hovering over links */
+          &:hover{
+            color: $hover-color-navigation-bar;
+          }
+        }
+      }
+    }
+
+    /* Mobile information container style */
+    .navbar-mobile-information{
+      @include set-position-top-left-and-background-color(absolute, 0, 0, white);
+      display: block;
+      @include set-width-and-height(100%,100%);
+
+
+      /* Information icon bar style */
+      .navbar-mobile-information-icons{
+        @include set-flex-align-and-justify-content(center, space-around);
+        background-color: white;
+        height: 60px;
+      }
+
+      /* Information container title style */
+      .navbar-mobile-information__h3{
+        margin-left: 20px;
+      }
+
+      /* Container style for mobile information links */
+      .navbar-mobile-information-links{
+        position: fixed;
+        left: 0;
+        @include set-width-and-height(100%,100%);
+        transition: 0.5s ease;
+
+        /* Style of the links in the mobile information container */
+        .navbar-mobile-information-links__link{
+          @include set-color-font-and-text-decoration($primary-text-color, none);
+          display: flex;
+          flex-direction: column;
+          margin: 20px;
+          font-size: 15px;
+
+          /* Color change when hovering over links */
+          &:hover{
+            color: $hover-color-navigation-bar;
+          }
+        }
+      }
+    }
+
   }
 }
