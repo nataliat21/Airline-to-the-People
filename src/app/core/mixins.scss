@@ -51,3 +51,9 @@
   left: $left;
   background-color: $background-color;
 }
+
+/* Mixin to set fontz size and font color*/
+@mixin set-font-size-and-font-color($font-size, $font-color){
+  font-size: $font-size;
+  color: $font-color;
+}

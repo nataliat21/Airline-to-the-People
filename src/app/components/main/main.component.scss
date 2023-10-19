@@ -6,20 +6,23 @@
     position: relative;
 
     /* Styles for the promotional image */
-    .promotional__img{
+    .promotional__img--desktop{
       @include set-width-and-height(100%, 100%);
+    }
+
+    .promotional__img--mobile{
+      display: none;
     }
 
     /* Styles for the promotional information container */
     .promotional-information{
       position: absolute;
-      top: 130px;
+      top: 80px;
       left: 80px;
 
       /* Styles for the title of the promotional section */
       .promotional-information__title{
-        font-size: 40px;
-        color: white;
+        @include set-font-size-and-font-color(40px, white);
       }
 
       /* Styles for the descriptive text of the promotional section */
@@ -40,6 +43,42 @@
           transition: 0.5s ease;
           border: 1px solid black;
           transform: translateY(-3px);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 280px) and (max-width: 912px){
+  .main{
+    /* Styles for the promotional section on mobile */
+    .promotional{
+
+      /* Styles for the promotional image on desktop devices (hidden) */
+      .promotional__img--desktop{
+        display: none;
+      }
+
+      /* Styles for the promotional image on mobile devices */
+      .promotional__img--mobile{
+        display: block;
+        @include set-width-and-height(100%, 100%);
+      }
+
+      /* Styles for the promotional information container */
+      .promotional-information{
+        top: 40px;
+        left: 10px;
+        margin: 5px;
+
+        /* Styles for the title of the promotional information container */
+        .promotional-information__title{
+          @include set-font-size-and-font-color(25px, white);
+        }
+
+        /* Styles for the descriptive text of the promotional information container */
+        .promotional-information__text{
+          @include set-font-size-and-font-color(15px, white);
         }
       }
     }
