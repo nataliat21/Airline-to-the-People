@@ -26,6 +26,7 @@ body {
   /* Styles for the left part of the navigation bar */
   /* Styles for the right part of the navigation bar */
   /* Styles to hide the mobile version of the navigation bar */
+  /* Styles to hide the mobile version of the menu */
 }
 .navbar .navbar-left {
   display: flex;
@@ -106,6 +107,9 @@ body {
 .navbar .navbar-mobile {
   display: none;
 }
+.navbar .navbar-mobile-menu {
+  display: none;
+}
 
 @media (min-width: 280px) and (max-width: 912px) {
   /* Styles for the navigation bar in mobile view */
@@ -124,5 +128,44 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: relative;
+    z-index: 1;
+  }
+  .navbar .navbar-mobile-menu {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+    z-index: 2;
+    background-color: white;
+  }
+  .navbar .navbar-mobile-menu .navbar-mobile-menu-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    height: 60px;
+  }
+  .navbar .navbar-mobile-menu .navbar-mobile-menu-links {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+    z-index: 3;
+  }
+  .navbar .navbar-mobile-menu .navbar-mobile-menu-links .navbar-mobile-menu-links__line {
+    width: 90%;
+  }
+  .navbar .navbar-mobile-menu .navbar-mobile-menu-links .navbar-mobile-menu-links__link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    font-size: 15px;
   }
 }/*# sourceMappingURL=navbar.component.css.map */
