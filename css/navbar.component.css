@@ -5,7 +5,9 @@
 /* Mixin to set position, left, transform, background color, and border radius properties*/
 /*Mixin to set flex direction and justification*/
 /* Mixin to set background color and border radius*/
-/* Mixin that changes the color of the letter and the decoration of the text*/
+/* Mixin to set the color of the letter and the decoration of the text*/
+/* Mixin to set width and height*/
+/* Mixin to set the type of container position, the property left, top and background color */
 /* Custom website font */
 @font-face {
   font-family: "Roboto Regular";
@@ -120,7 +122,7 @@ body {
     grid-template-columns: 1fr;
     justify-content: center;
     height: 60px;
-    /* Styles for left and right navigation bar elements */
+    /* Styles for left and right navigation bar elements on mobile */
     /* Styles for the container of the mobile version of the navigation bar */
     /* Mobile menu style */
     /* Mobile information container style */
@@ -134,17 +136,15 @@ body {
     align-items: center;
     justify-content: space-around;
     position: relative;
-    z-index: 1;
   }
   .navbar .navbar-mobile-menu {
     position: absolute;
-    display: block;
     top: 0;
     left: 0;
+    background-color: white;
+    display: block;
     width: 100%;
     height: 100%;
-    z-index: 2;
-    background-color: white;
     /* Menu icon bar style */
     /* Container style for mobile menu links */
   }
@@ -161,7 +161,6 @@ body {
     width: 100%;
     height: 100%;
     transition: 0.5s ease;
-    z-index: 3;
     /* Style of the separator line between links */
     /* Style of links in the mobile menu */
   }
@@ -169,8 +168,8 @@ body {
     width: 90%;
   }
   .navbar .navbar-mobile-menu .navbar-mobile-menu-links .navbar-mobile-menu-links__link {
-    text-decoration: none;
     color: black;
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     margin: 20px;
@@ -182,13 +181,12 @@ body {
   }
   .navbar .navbar-mobile-information {
     position: absolute;
-    display: block;
     top: 0;
     left: 0;
+    background-color: white;
+    display: block;
     width: 100%;
     height: 100%;
-    z-index: 2;
-    background-color: white;
     /* Information icon bar style */
     /* Information container title style */
     /* Container style for mobile information links */
@@ -209,12 +207,11 @@ body {
     width: 100%;
     height: 100%;
     transition: 0.5s ease;
-    z-index: 3;
     /* Style of the links in the mobile information container */
   }
   .navbar .navbar-mobile-information .navbar-mobile-information-links .navbar-mobile-information-links__link {
-    text-decoration: none;
     color: black;
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     margin: 20px;

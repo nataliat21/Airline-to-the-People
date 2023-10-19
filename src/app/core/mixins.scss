@@ -32,8 +32,22 @@
   border-radius: $border-radius;
 }
 
-/* Mixin that changes the color of the letter and the decoration of the text*/
+/* Mixin to set the color of the letter and the decoration of the text*/
 @mixin set-color-font-and-text-decoration($color-font, $text-decoration){
   color: $color-font;
   text-decoration: $text-decoration;
+}
+
+/* Mixin to set width and height*/
+@mixin set-width-and-height($width, $height){
+  width: $width;
+  height: $height;
+}
+
+/* Mixin to set the type of container position, the property left, top and background color */
+@mixin set-position-top-left-and-background-color($position,$top,$left,$background-color){
+  position: $position;
+  top: $top;
+  left: $left;
+  background-color: $background-color;
 }
