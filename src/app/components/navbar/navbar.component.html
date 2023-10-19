@@ -38,10 +38,21 @@
 
   <!-- Container for the mobile version of the navigation bar -->
   <div class="navbar-mobile">
+
+    <div class="navbar-mobile-menu">
     <!-- Mobile menu icon -->
-    <svg class="navbar-mobile__icon navbar-mobile__icon--menu" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3 18V16.5H21V18H3ZM3 12.75V11.25H21V12.75H3ZM3 7.5V6H21V7.5H3Z" fill="black"/>
-    </svg>
+      <svg class="navbar-mobile-menu__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 18V16.5H21V18H3ZM3 12.75V11.25H21V12.75H3ZM3 7.5V6H21V7.5H3Z" fill="black"/>
+      </svg>
+
+      <div class="navbar-mobile-menu-links">
+        <a class="navbar-mobile-menu-links__link" href="#">Check-in</a>
+        <hr class="navbar-mobile-menu-links__line">
+        <a class="navbar-mobile-menu-links__link" href="#">Manage my booking</a>
+        <hr class="navbar-mobile-menu-links__line">
+        <a class="navbar-mobile-menu-links__link" href="#">Information</a>
+      </div>
+    </div>
 
     <!-- Airline logo in mobile version -->
     <img class="navbar-mobile__img" src="../../../assets/images/airline-logo-mobile.png" alt="Airline logo mobile">
