@@ -1,1 +1,5 @@
-/*# sourceMappingURL=app.component.css.map */
+/* Styles for the section that contains the header and navigation bar */
+.header-navbar__section {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+}/*# sourceMappingURL=app.component.css.map */
