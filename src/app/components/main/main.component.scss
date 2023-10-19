@@ -1,0 +1,47 @@
+@import '../../../styles.scss';
+
+.main{
+  /* Styles for the promotional section */
+  .promotional{
+    position: relative;
+
+    /* Styles for the promotional image */
+    .promotional__img{
+      @include set-width-and-height(100%, 100%);
+    }
+
+    /* Styles for the promotional information container */
+    .promotional-information{
+      position: absolute;
+      top: 130px;
+      left: 80px;
+
+      /* Styles for the title of the promotional section */
+      .promotional-information__title{
+        font-size: 40px;
+        color: white;
+      }
+
+      /* Styles for the descriptive text of the promotional section */
+      .promotional-information__text{
+        color: white;
+      }
+
+      /* Styles for the promotional section purchase button */
+      .promotional-information__btn{
+        @include set-background-color-and-border-radius( $promotional-section-button-color, 20px);
+        color: white;
+        border: none;
+        margin-top: 20px;
+        padding: 10px 60px;
+        transition: transform 0.2s;
+
+        &:hover{
+          transition: 0.5s ease;
+          border: 1px solid black;
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+}
