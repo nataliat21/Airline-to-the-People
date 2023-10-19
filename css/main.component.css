@@ -71,6 +71,7 @@ body {
     /* Styles for the promotional section on mobile */
   }
   .main .promotional {
+    z-index: -1;
     /* Styles for the promotional image on desktop devices (hidden) */
     /* Styles for the promotional image on mobile devices */
     /* Styles for the promotional information container */
