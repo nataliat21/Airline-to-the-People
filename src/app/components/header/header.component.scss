@@ -1,7 +1,8 @@
+@import '../../../styles.scss';
+
 /* Styles for the header */
 .header{
   height: 80px;
-  display: flex;
-  align-items: center;
+  @include flex-align(center);
   justify-content: flex-end;
 }
