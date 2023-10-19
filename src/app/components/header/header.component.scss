@@ -6,3 +6,9 @@
   @include flex-align(center);
   justify-content: flex-end;
 }
+
+@media (min-width: 280px) and (max-width: 912px){
+  .header{
+    display: none;
+  }
+}

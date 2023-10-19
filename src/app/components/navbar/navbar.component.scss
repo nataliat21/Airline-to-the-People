@@ -55,8 +55,7 @@
 
   /* Styles for the right part of the navigation bar */
   .navbar-right{
-    @include flex-align(center);
-    justify-content: flex-end;
+    @include set-flex-align-and-justify-content(center, flex-end);
     margin-right: 80px;
 
     /* Styles for the links on the right side of the navigation bar */
@@ -74,6 +73,31 @@
       .navbar-right__icon{
         margin: 5px;
       }
+    }
+  }
+
+  /* Styles to hide the mobile version of the navigation bar */
+  .navbar-mobile{
+    display: none;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 912px){
+  /* Styles for the navigation bar in mobile view */
+  .navbar{
+    grid-template-columns: 1fr;
+    justify-content: center;
+    height: 60px;
+
+    /* Styles for left and right navigation bar elements */
+    .navbar-left,
+    .navbar-right{
+      display: none;
+    }
+
+    /* Styles for the container of the mobile version of the navigation bar */
+    .navbar-mobile{
+      @include set-flex-align-and-justify-content(center, space-around);
     }
   }
 }
