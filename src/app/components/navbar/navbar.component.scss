@@ -1,0 +1,43 @@
+@import '../../../styles.scss';
+
+/* Styles for the navigation bar */
+.navbar{
+  height: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  /* Styles for the left part of the navigation bar */
+  .navbar-left{
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+
+  /* Styles for the links on the left side of the navigation bar */
+    .navbar-left__link{
+      color: $primary-text-color;
+      text-decoration: none;
+      margin: 10px;
+    }
+  }
+
+  /* Styles for the right part of the navigation bar */
+  .navbar-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 80px;
+
+    /* Styles for the links on the right side of the navigation bar */
+    .navbar-right__link{
+      color: $primary-text-color;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      /* Styles for the icons on the right side of the navigation bar */
+      .navbar-right__icon{
+        margin: 5px;
+      }
+    }
+  }
+}
