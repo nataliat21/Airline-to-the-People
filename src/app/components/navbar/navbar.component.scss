@@ -47,6 +47,10 @@
             @include set-flex-direction-and-justify-content(column, center);
             margin-bottom: 8px;
             font-size: 15px;
+
+            &:hover{
+              color: $hover-color-navigation-bar;
+            }
           }
         }
       }
@@ -108,6 +112,7 @@
 
     }
 
+    /* Mobile menu style */
     .navbar-mobile-menu{
       position: absolute;
       display: block;
@@ -118,6 +123,7 @@
       z-index: 2;
       background-color: white;
 
+      /* Menu icon bar style */
       .navbar-mobile-menu-icons{
         display: flex;
         align-items: center;
@@ -126,6 +132,7 @@
         height: 60px;
       }
 
+      /* Container style for mobile menu links */
       .navbar-mobile-menu-links{
         position: fixed;
         left: 0;
@@ -134,10 +141,12 @@
         transition: 0.5s ease;
         z-index: 3;
 
+        /* Style of the separator line between links */
         .navbar-mobile-menu-links__line{
           width: 90%;
         }
 
+        /* Style of links in the mobile menu */
         .navbar-mobile-menu-links__link{
           text-decoration: none;
           color: $primary-text-color;
@@ -145,10 +154,16 @@
           flex-direction: column;
           margin: 20px;
           font-size: 15px;
+
+          /* Color change when hovering over links */
+          &:hover{
+            color: $hover-color-navigation-bar;
+          }
         }
       }
     }
 
+    /* Mobile information container style */
     .navbar-mobile-information{
       position: absolute;
       display: block;
@@ -159,6 +174,7 @@
       z-index: 2;
       background-color: white;
 
+      /* Information icon bar style */
       .navbar-mobile-information-icons{
         display: flex;
         align-items: center;
@@ -167,10 +183,12 @@
         height: 60px;
       }
 
+      /* Information container title style */
       .navbar-mobile-information__h3{
         margin-left: 20px;
       }
 
+      /* Container style for mobile information links */
       .navbar-mobile-information-links{
         position: fixed;
         left: 0;
@@ -179,6 +197,7 @@
         transition: 0.5s ease;
         z-index: 3;
 
+        /* Style of the links in the mobile information container */
         .navbar-mobile-information-links__link{
           text-decoration: none;
           color: $primary-text-color;
@@ -186,6 +205,11 @@
           flex-direction: column;
           margin: 20px;
           font-size: 15px;
+
+          /* Color change when hovering over links */
+          &:hover{
+            color: $hover-color-navigation-bar;
+          }
         }
       }
     }
