@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  showModal = false; /*Property to control the visibility of the modal window*/
+
+    /* Method to toggle modal window visibility*/
+    toggleModal() {
+      this.showModal = !this.showModal;
+    }
 }
