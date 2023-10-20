@@ -139,7 +139,8 @@ body {
   .navbar .navbar-mobile {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0px 10px;
     position: relative;
   }
   .navbar .navbar-mobile-menu {
@@ -157,8 +158,9 @@ body {
   .navbar .navbar-mobile-menu .navbar-mobile-menu-icons {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: white;
+    margin: 0px 10px;
     height: 60px;
   }
   .navbar .navbar-mobile-menu .navbar-mobile-menu-links {

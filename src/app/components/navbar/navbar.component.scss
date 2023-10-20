@@ -108,7 +108,8 @@
 
     /* Styles for the container of the mobile version of the navigation bar */
     .navbar-mobile{
-      @include set-flex-align-and-justify-content(center, space-around);
+      @include set-flex-align-and-justify-content(center, space-between);
+      margin: 0px 10px;
       position: relative;
 
     }
@@ -122,8 +123,9 @@
 
       /* Menu icon bar style */
       .navbar-mobile-menu-icons{
-        @include set-flex-align-and-justify-content(center, space-around);
+        @include set-flex-align-and-justify-content(center, space-between);
         background-color: white;
+        margin: 0px 10px;
         height: 60px;
       }
 
