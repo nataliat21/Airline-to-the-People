@@ -50,31 +50,30 @@
     .destinations-cards{
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
-      align-items: center;
-      justify-content: space-evenly;
       gap: 10px;
 
       /* Styles for each destination card */
       .destinations-card{
-        width: 100%;
-        height: 200px;
+        @include set-width-and-height(100%, 200px);
         position: relative;
+        transition: transform 0.5s;
+
+        &:hover{
+          transform: translateY(-5px);
+        }
 
         /* Styles to add an elliptical background layer to the image */
         &::before {
           content: "";
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.5);
+          @include set-width-and-height(100%, 200px);
+          @include set-background-color-and-border-radius( rgba(0, 0, 0, 0.5), 10px);
           position: absolute;
-          border-radius: 10px;
           clip-path: ellipse(87% 98% at 100% 100%);
         }
 
         /* Styles for the destination card image */
         .destinations-card__img{
-          width: 100%;
-          height: 100%;
+          @include set-width-and-height(100%, 100%);
           object-fit: cover;
           border-radius: 10px;
           gap: 10px;
@@ -82,22 +81,13 @@
         }
         /* Styles for the destination card title */
         .destinations-card__title{
-          position: absolute;
-          color: white;
-          bottom: 0;
-          right: 5px;
-          top:130px ;
-
+          @include set-position-font-color-bottom-right-top(absolute,white,0,5px,130px);
         }
 
         /* Styles for the destination card text */
         .destinations-card__text{
-          position: absolute;
-          color: white;
+          @include set-position-font-color-bottom-right-top(absolute,white,0,5px,160px);
           font-size: 15px;
-          bottom: 0;
-          right: 5px;
-          top: 160px;
         }
       }
     }

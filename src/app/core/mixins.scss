@@ -52,8 +52,17 @@
   background-color: $background-color;
 }
 
-/* Mixin to set fontz size and font color*/
+/* Mixin to set font size and font color*/
 @mixin set-font-size-and-font-color($font-size, $font-color){
   font-size: $font-size;
   color: $font-color;
+}
+
+/* Mixin to set position, font color, bottom, right and top */
+@mixin set-position-font-color-bottom-right-top($position, $font-color, $bottom, $right, $top){
+  position: $position;
+  color: $font-color;
+  bottom: $bottom;
+  right: $right;
+  top: $top;
 }
