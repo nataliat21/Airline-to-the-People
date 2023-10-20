@@ -1,0 +1,136 @@
+@import '../../../styles.scss';
+
+.footer{
+  /* Styles for the footer info section container */
+  .footer-information{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $footer-background-color;
+    padding: 10px 0px;
+
+    /* Styles for the image container */
+    .footer-information-image{
+      @include set-flex-align-and-justify-content(flex-end,center);
+
+      .footer-information-image__img--mobile{
+        display: none;
+      }
+    }
+
+     /* Styles for the social media icon container and title on mobile */
+    .footer-information-social-media-mobile{
+      display: none;
+    }
+
+    /* Styles for the container that contains policy, destination and flight information */
+    .footer-information-travel{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      /*Styles for each policy, destination and flight container*/
+      .footer-information-travel-destinations,
+      .footer-information-travel-policy,
+      .footer-information-travel-flight{
+
+        display: flex;
+        flex-direction: column;
+
+        /* Styles for policy, destination and flight links*/
+        .footer-information-travel-destinations__link,
+        .footer-information-travel-policy__link,
+        .footer-information-travel-flight__link{
+          @include set-color-font-and-text-decoration($primary-text-color, none);
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  /* Styles for the social media icon container and title on desktop */
+  .footer-information-social-media-desktop{
+    background-color: $footer-background-color;
+    @include set-flex-align-and-justify-content(flex-end,flex-end);
+    flex-direction: column;
+    padding-right: 145px;
+    padding-bottom: 20px;
+
+    /* Styles for the container that contains each of the icons*/
+    .footer-information-social-media-desktop-icons{
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+    }
+
+  }
+
+  /*Styles for the container of additional information on the footer*/
+  .footer-aditionals{
+    background-color: $footer-background-color-secondary-color;
+
+    /*Styles for the text about additional footer information */
+    .footer-aditionals__text{
+      color:$text-color-footer-aditionals-section;
+      font-size: 13px;
+      padding: 10px 0px 10px 100px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 280px) and (max-width: 912px){
+  .footer{
+    /* Styles for the footer info section container  on mobile*/
+    .footer-information{
+      grid-template-columns: 1fr;
+      padding: 15px;
+
+       /* Styles for the image container */
+      .footer-information-image{
+        @include set-flex-align-and-justify-content(center,flex-start);
+
+         /* Styles for the image on desktop */
+        .footer-information-image__img--desktop{
+          display: none;
+        }
+
+         /* Styles for the image on mobile */
+        .footer-information-image__img--mobile{
+          display: block;
+        }
+      }
+
+       /* Styles for the social media icon container and title on mobile */
+      .footer-information-social-media-mobile{
+        display: block;
+
+        /* Styles for the container that contains each of the icons*/
+        .footer-information-social-media-mobile-icons{
+          /* Styles for each of the icons*/
+          .footer-information-social-media-mobile-icons__icon{
+            margin: 5px;
+          }
+        }
+      }
+
+      /* Styles for the container that contains policy, destination and flight information */
+      .footer-information-travel{
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Styles for the social media icon container and title on desktop */
+    .footer-information-social-media-desktop{
+      display: none;
+    }
+
+    /*Styles for the container of additional information on the footer*/
+    .footer-aditionals{
+
+      /*Styles for the text of additional information on the footer*/
+      .footer-aditionals__text{
+        padding: 5px 10px;
+      }
+    }
+  }
+}

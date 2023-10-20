@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+/* Import of the variables and mixins used in each of the component style sheets.*/
+/* Mixin that applies the flexbox property and modifies the value of the align property */
+/*Mixin to set flex align and justification*/
+/* Mixin to set position, left, transform, background color, and border radius properties*/
+/*Mixin to set flex direction and justification*/
+/* Mixin to set background color and border radius*/
+/* Mixin to set the color of the letter and the decoration of the text*/
+/* Mixin to set width and height*/
+/* Mixin to set the type of container position, the property left, top and background color */
+/* Mixin to set font size and font color*/
+/* Mixin to set position, font color, bottom, right and top */
+/* Mixin to set the number of columns, height and margin*/
+/* Mixin to change the top margin, left margin and height*/
+/* Custom website font */
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../src/assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+/* Global styles for the body tag */
+body {
+  font-family: "Roboto Regular", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer {
+  /* Styles for the footer info section container */
+  /* Styles for the social media icon container and title on desktop */
+  /*Styles for the container of additional information on the footer*/
+}
+.footer .footer-information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #E7E6F6;
+  padding: 10px 0px;
+  /* Styles for the image container */
+  /* Styles for the social media icon container and title on mobile */
+  /* Styles for the container that contains policy, destination and flight information */
+}
+.footer .footer-information .footer-information-image {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.footer .footer-information .footer-information-image .footer-information-image__img--mobile {
+  display: none;
+}
+.footer .footer-information .footer-information-social-media-mobile {
+  display: none;
+}
+.footer .footer-information .footer-information-travel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /*Styles for each policy, destination and flight container*/
+}
+.footer .footer-information .footer-information-travel .footer-information-travel-destinations,
+.footer .footer-information .footer-information-travel .footer-information-travel-policy,
+.footer .footer-information .footer-information-travel .footer-information-travel-flight {
+  display: flex;
+  flex-direction: column;
+  /* Styles for policy, destination and flight links*/
+}
+.footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-destinations__link,
+.footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-policy__link,
+.footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-flight__link,
+.footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-destinations__link,
+.footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-policy__link,
+.footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-flight__link,
+.footer .footer-information .footer-information-travel .footer-information-travel-flight .footer-information-travel-destinations__link,
+.footer .footer-information .footer-information-travel .footer-information-travel-flight .footer-information-travel-policy__link,
+.footer .footer-information .footer-information-travel .footer-information-travel-flight .footer-information-travel-flight__link {
+  color: black;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+.footer .footer-information-social-media-desktop {
+  background-color: #E7E6F6;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-right: 145px;
+  padding-bottom: 20px;
+  /* Styles for the container that contains each of the icons*/
+}
+.footer .footer-information-social-media-desktop .footer-information-social-media-desktop-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.footer .footer-aditionals {
+  background-color: #F1F0FF;
+  /*Styles for the text about additional footer information */
+}
+.footer .footer-aditionals .footer-aditionals__text {
+  color: #9292A0;
+  font-size: 13px;
+  padding: 10px 0px 10px 100px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 280px) and (max-width: 912px) {
+  .footer {
+    /* Styles for the footer info section container  on mobile*/
+    /* Styles for the social media icon container and title on desktop */
+    /*Styles for the container of additional information on the footer*/
+  }
+  .footer .footer-information {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    /* Styles for the image container */
+    /* Styles for the social media icon container and title on mobile */
+    /* Styles for the container that contains policy, destination and flight information */
+  }
+  .footer .footer-information .footer-information-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Styles for the image on desktop */
+    /* Styles for the image on mobile */
+  }
+  .footer .footer-information .footer-information-image .footer-information-image__img--desktop {
+    display: none;
+  }
+  .footer .footer-information .footer-information-image .footer-information-image__img--mobile {
+    display: block;
+  }
+  .footer .footer-information .footer-information-social-media-mobile {
+    display: block;
+    /* Styles for the container that contains each of the icons*/
+  }
+  .footer .footer-information .footer-information-social-media-mobile .footer-information-social-media-mobile-icons {
+    /* Styles for each of the icons*/
+  }
+  .footer .footer-information .footer-information-social-media-mobile .footer-information-social-media-mobile-icons .footer-information-social-media-mobile-icons__icon {
+    margin: 5px;
+  }
+  .footer .footer-information .footer-information-travel {
+    grid-template-columns: 1fr;
+  }
+  .footer .footer-information-social-media-desktop {
+    display: none;
+  }
+  .footer .footer-aditionals {
+    /*Styles for the text of additional information on the footer*/
+  }
+  .footer .footer-aditionals .footer-aditionals__text {
+    padding: 5px 10px;
+  }
+}/*# sourceMappingURL=footer.component.css.map */

@@ -127,8 +127,6 @@
 
       /* Container style for mobile menu links */
       .navbar-mobile-menu-links{
-        position: fixed;
-        left: 0;
         @include set-width-and-height(100%,100%);
         transition: 0.5s ease;
 
@@ -169,8 +167,6 @@
 
       /* Container style for mobile information links */
       .navbar-mobile-information-links{
-        position: fixed;
-        left: 0;
         @include set-width-and-height(100%,100%);
         transition: 0.5s ease;
 

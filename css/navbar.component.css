@@ -10,6 +10,8 @@
 /* Mixin to set the type of container position, the property left, top and background color */
 /* Mixin to set font size and font color*/
 /* Mixin to set position, font color, bottom, right and top */
+/* Mixin to set the number of columns, height and margin*/
+/* Mixin to change the top margin, left margin and height*/
 /* Custom website font */
 @font-face {
   font-family: "Roboto Regular";
@@ -158,8 +160,6 @@ body {
     height: 60px;
   }
   .navbar .navbar-mobile-menu .navbar-mobile-menu-links {
-    position: fixed;
-    left: 0;
     width: 100%;
     height: 100%;
     transition: 0.5s ease;
@@ -200,8 +200,6 @@ body {
     margin-left: 20px;
   }
   .navbar .navbar-mobile-information .navbar-mobile-information-links {
-    position: fixed;
-    left: 0;
     width: 100%;
     height: 100%;
     transition: 0.5s ease;
