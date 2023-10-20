@@ -198,7 +198,7 @@
 
         /* Styles for the ad image */
         .advertisement-image__img{
-          @include set-margin-top-height-margin-left(-200px,600px,-150px);
+          @include set-margin-top-height-margin-left(-200px,600px,-100px);
         }
       }
       /* Styles for the ad content container */
