@@ -1,1 +1,70 @@
 @import '../../../styles.scss';
+
+.footer{
+  /* Styles for the footer info section container */
+  .footer-information{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $footer-background-color;
+    padding: 10px 0px;
+
+    /* Styles for the image container */
+    .footer-information-image{
+      @include set-flex-align-and-justify-content(flex-end,center);
+    }
+
+    /* Styles for the container that contains policy, destination and flight information */
+    .footer-information-travel{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      /*Styles for each policy, destination and flight container*/
+      .footer-information-travel-destinations,
+      .footer-information-travel-policy,
+      .footer-information-travel-flight{
+
+        display: flex;
+        flex-direction: column;
+
+        /* Styles for policy, destination and flight links*/
+        .footer-information-travel-destinations__link,
+        .footer-information-travel-policy__link,
+        .footer-information-travel-flight__link{
+          @include set-color-font-and-text-decoration($primary-text-color, none);
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  /* Styles for the social media icon container and title */
+  .footer-information-social-media{
+    background-color: $footer-background-color;
+    @include set-flex-align-and-justify-content(flex-end,flex-end);
+    flex-direction: column;
+    padding-right: 155px;
+    padding-bottom: 20px;
+
+    /* Styles for the container that contains each of the icons*/
+    .footer-information-social-media-icons{
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+    }
+
+  }
+
+  /*Styles for the container of additional information on the footer*/
+  .footer-aditionals{
+    background-color: $footer-background-color-secondary-color;
+
+    /*Styles for the text about additional footer information */
+    .footer-aditionals__text{
+      color:$text-color-footer-aditionals-section;
+      font-size: 13px;
+      padding: 10px 200px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
