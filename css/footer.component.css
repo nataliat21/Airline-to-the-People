@@ -26,7 +26,7 @@ body {
 
 .footer {
   /* Styles for the footer info section container */
-  /* Styles for the social media icon container and title */
+  /* Styles for the social media icon container and title on desktop */
   /*Styles for the container of additional information on the footer*/
 }
 .footer .footer-information {
@@ -35,12 +35,19 @@ body {
   background-color: #E7E6F6;
   padding: 10px 0px;
   /* Styles for the image container */
+  /* Styles for the social media icon container and title on mobile */
   /* Styles for the container that contains policy, destination and flight information */
 }
 .footer .footer-information .footer-information-image {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+}
+.footer .footer-information .footer-information-image .footer-information-image__img--mobile {
+  display: none;
+}
+.footer .footer-information .footer-information-social-media-mobile {
+  display: none;
 }
 .footer .footer-information .footer-information-travel {
   display: grid;
@@ -67,17 +74,17 @@ body {
   text-decoration: none;
   margin-bottom: 5px;
 }
-.footer .footer-information-social-media {
+.footer .footer-information-social-media-desktop {
   background-color: #E7E6F6;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   flex-direction: column;
-  padding-right: 155px;
+  padding-right: 145px;
   padding-bottom: 20px;
   /* Styles for the container that contains each of the icons*/
 }
-.footer .footer-information-social-media .footer-information-social-media-icons {
+.footer .footer-information-social-media-desktop .footer-information-social-media-desktop-icons {
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -89,7 +96,57 @@ body {
 .footer .footer-aditionals .footer-aditionals__text {
   color: #9292A0;
   font-size: 13px;
-  padding: 10px 200px;
+  padding: 10px 0px 10px 100px;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@media (min-width: 280px) and (max-width: 912px) {
+  .footer {
+    /* Styles for the footer info section container  on mobile*/
+    /* Styles for the social media icon container and title on desktop */
+    /*Styles for the container of additional information on the footer*/
+  }
+  .footer .footer-information {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    /* Styles for the image container */
+    /* Styles for the social media icon container and title on mobile */
+    /* Styles for the container that contains policy, destination and flight information */
+  }
+  .footer .footer-information .footer-information-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Styles for the image on desktop */
+    /* Styles for the image on mobile */
+  }
+  .footer .footer-information .footer-information-image .footer-information-image__img--desktop {
+    display: none;
+  }
+  .footer .footer-information .footer-information-image .footer-information-image__img--mobile {
+    display: block;
+  }
+  .footer .footer-information .footer-information-social-media-mobile {
+    display: block;
+    /* Styles for the container that contains each of the icons*/
+  }
+  .footer .footer-information .footer-information-social-media-mobile .footer-information-social-media-mobile-icons {
+    /* Styles for each of the icons*/
+  }
+  .footer .footer-information .footer-information-social-media-mobile .footer-information-social-media-mobile-icons .footer-information-social-media-mobile-icons__icon {
+    margin: 5px;
+  }
+  .footer .footer-information .footer-information-travel {
+    grid-template-columns: 1fr;
+  }
+  .footer .footer-information-social-media-desktop {
+    display: none;
+  }
+  .footer .footer-aditionals {
+    /*Styles for the text of additional information on the footer*/
+  }
+  .footer .footer-aditionals .footer-aditionals__text {
+    padding: 5px 10px;
+  }
 }/*# sourceMappingURL=footer.component.css.map */
