@@ -8,7 +8,8 @@
 /* Mixin to set the color of the letter and the decoration of the text*/
 /* Mixin to set width and height*/
 /* Mixin to set the type of container position, the property left, top and background color */
-/* Mixin to set fontz size and font color*/
+/* Mixin to set font size and font color*/
+/* Mixin to set position, font color, bottom, right and top */
 /* Custom website font */
 @font-face {
   font-family: "Roboto Regular";
