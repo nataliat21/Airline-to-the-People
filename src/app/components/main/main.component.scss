@@ -73,9 +73,9 @@
         &::before {
           content: "";
           @include set-width-and-height(100%, 200px);
-          @include set-background-color-and-border-radius( rgba(0, 0, 0, 0.5), 10px);
+          @include set-background-color-and-border-radius( rgba(0, 0, 0, 0.397), 10px);
           position: absolute;
-          clip-path: ellipse(87% 98% at 100% 100%);
+          clip-path: ellipse(98% 95% at 100% 100%);
         }
 
         /* Styles for the destination card image */
@@ -88,12 +88,12 @@
         }
         /* Styles for the destination card title */
         .destinations-card__title{
-          @include set-position-font-color-bottom-right-top(absolute,white,0,5px,130px);
+          @include set-position-font-color-bottom-right-top(absolute,white,0,10px,120px);
         }
 
         /* Styles for the destination card text */
         .destinations-card__text{
-          @include set-position-font-color-bottom-right-top(absolute,white,0,5px,160px);
+          @include set-position-font-color-bottom-right-top(absolute,white,0,10px,150px);
           font-size: 15px;
         }
       }
@@ -205,7 +205,7 @@
 
         /* Styles for the ad image */
         .advertisement-image__img{
-          @include set-margin-top-height-margin-left(-200px,600px,-100px);
+          @include set-margin-top-height-margin-left(-300px,600px,-115px);
         }
       }
       /* Styles for the ad content container */
