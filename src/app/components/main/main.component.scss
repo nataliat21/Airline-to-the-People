@@ -148,7 +148,7 @@
   .main{
     /* Styles for the promotional section on mobile */
     .promotional{
-      z-index: -1;
+      z-index: 1;
       /* Styles for the promotional image on desktop devices (hidden) */
       .promotional__img--desktop{
         display: none;

@@ -118,7 +118,7 @@
       @include set-position-top-left-and-background-color(absolute, 0, 0, white);
       display: block;
       @include set-width-and-height(100%,100%);
-
+      z-index: 2;
 
       /* Menu icon bar style */
       .navbar-mobile-menu-icons{
@@ -153,7 +153,7 @@
       @include set-position-top-left-and-background-color(absolute, 0, 0, white);
       display: block;
       @include set-width-and-height(100%,100%);
-
+      z-index: 2;
 
       /* Information icon bar style */
       .navbar-mobile-information-icons{
