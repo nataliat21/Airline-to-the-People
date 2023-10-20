@@ -26,6 +26,7 @@ body {
 }
 .main .promotional {
   position: relative;
+  z-index: -1;
   /* Styles for the promotional image */
   /* Styles for the promotional information container */
 }
