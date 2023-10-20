@@ -1,10 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 /* Import of the variables and mixins used in each of the component style sheets.*/
 /* Mixin that applies the flexbox property and modifies the value of the align property */
+/*Mixin to set flex align and justification*/
 /* Mixin to set position, left, transform, background color, and border radius properties*/
 /*Mixin to set flex direction and justification*/
 /* Mixin to set background color and border radius*/
-/* Mixin that changes the color of the letter and the decoration of the text*/
+/* Mixin to set the color of the letter and the decoration of the text*/
+/* Mixin to set width and height*/
+/* Mixin to set the type of container position, the property left, top and background color */
+/* Mixin to set font size and font color*/
+/* Mixin to set position, font color, bottom, right and top */
 /* Custom website font */
 @font-face {
   font-family: "Roboto Regular";

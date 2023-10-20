@@ -132,11 +132,6 @@
         @include set-width-and-height(100%,100%);
         transition: 0.5s ease;
 
-        /* Style of the separator line between links */
-        .navbar-mobile-menu-links__line{
-          width: 90%;
-        }
-
         /* Style of links in the mobile menu */
         .navbar-mobile-menu-links__link{
           @include set-color-font-and-text-decoration($primary-text-color, none);
