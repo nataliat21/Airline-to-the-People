@@ -74,6 +74,17 @@ body {
   text-decoration: none;
   margin-bottom: 5px;
 }
+.footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-destinations__link:hover,
+.footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-policy__link:hover,
+.footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-flight__link:hover,
+.footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-destinations__link:hover,
+.footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-policy__link:hover,
+.footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-flight__link:hover,
+.footer .footer-information .footer-information-travel .footer-information-travel-flight .footer-information-travel-destinations__link:hover,
+.footer .footer-information .footer-information-travel .footer-information-travel-flight .footer-information-travel-policy__link:hover,
+.footer .footer-information .footer-information-travel .footer-information-travel-flight .footer-information-travel-flight__link:hover {
+  color: #537FE7;
+}
 .footer .footer-information-social-media-desktop {
   background-color: #E7E6F6;
   display: flex;

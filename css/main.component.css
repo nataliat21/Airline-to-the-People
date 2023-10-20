@@ -31,7 +31,7 @@ body {
 }
 .main .promotional {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   /* Styles for the promotional image */
   /* Styles for the promotional information container */
 }
@@ -64,6 +64,11 @@ body {
   border: none;
   margin-top: 20px;
   padding: 10px 60px;
+}
+.main .promotional .promotional-information .promotional-information__btn:hover {
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.356);
+  border: 1px solid white;
 }
 .main .destinations {
   margin: 70px;

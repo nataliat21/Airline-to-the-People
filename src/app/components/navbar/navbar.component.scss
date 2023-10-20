@@ -10,6 +10,7 @@
   .navbar-left{
     @include flex-align(center);
     margin-left: 40px;
+    z-index: 2;
 
     /* Styles for the links on the left side of the navigation bar */
     .navbar-left__link{
@@ -47,6 +48,7 @@
             @include set-flex-direction-and-justify-content(column, center);
             margin-bottom: 8px;
             font-size: 15px;
+
 
             &:hover{
               color: $hover-color-navigation-bar;

@@ -38,6 +38,7 @@ body {
   display: flex;
   align-items: center;
   margin-left: 40px;
+  z-index: 2;
   /* Styles for the links on the left side of the navigation bar */
 }
 .navbar .navbar-left .navbar-left__link {

@@ -41,6 +41,10 @@
         .footer-information-travel-flight__link{
           @include set-color-font-and-text-decoration($primary-text-color, none);
           margin-bottom: 5px;
+
+          &:hover{
+            color: $hover-color-navigation-bar;
+          }
         }
       }
     }
