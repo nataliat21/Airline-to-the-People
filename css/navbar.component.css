@@ -197,12 +197,13 @@ body {
   .navbar .navbar-mobile-information .navbar-mobile-information-icons {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: white;
+    margin: 0 10px;
     height: 60px;
   }
   .navbar .navbar-mobile-information .navbar-mobile-information__h3 {
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .navbar .navbar-mobile-information .navbar-mobile-information-links {
     width: 100%;
@@ -215,7 +216,7 @@ body {
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 30px;
     font-size: 15px;
     /* Color change when hovering over links */
   }

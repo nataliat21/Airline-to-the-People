@@ -159,14 +159,15 @@
 
       /* Information icon bar style */
       .navbar-mobile-information-icons{
-        @include set-flex-align-and-justify-content(center, space-around);
+        @include set-flex-align-and-justify-content(center, space-between);
         background-color: white;
+        margin: 0 10px;
         height: 60px;
       }
 
       /* Information container title style */
       .navbar-mobile-information__h3{
-        margin-left: 20px;
+        margin-left: 10px;
       }
 
       /* Container style for mobile information links */
@@ -179,7 +180,7 @@
           @include set-color-font-and-text-decoration($primary-text-color, none);
           display: flex;
           flex-direction: column;
-          margin: 20px;
+          margin: 30px;
           font-size: 15px;
 
           /* Color change when hovering over links */
