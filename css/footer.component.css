@@ -22,18 +22,4 @@ body {
   font-family: "Roboto Regular", sans-serif;
   margin: 0px;
   padding: 0px;
-}
-
-/* Styles for the header */
-.header {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-@media (min-width: 280px) and (max-width: 912px) {
-  .header {
-    display: none;
-  }
-}/*# sourceMappingURL=header.component.css.map */
+}/*# sourceMappingURL=footer.component.css.map */
