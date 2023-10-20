@@ -66,3 +66,18 @@
   right: $right;
   top: $top;
 }
+
+/* Mixin to set the number of columns, height and margin*/
+@mixin set-grid-template-columns-height-margin($grid-template-columns,$height,$margin){
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+  height: $height;
+  margin: $margin;
+}
+
+/* Mixin to change the top margin, left margin and height*/
+@mixin set-margin-top-height-margin-left($margin-top, $height, $margin-left){
+  margin-top: $margin-top;
+  height: $height;
+  margin-left: $margin-left;
+}

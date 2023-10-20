@@ -10,6 +10,8 @@
 /* Mixin to set the type of container position, the property left, top and background color */
 /* Mixin to set font size and font color*/
 /* Mixin to set position, font color, bottom, right and top */
+/* Mixin to set the number of columns, height and margin*/
+/* Mixin to change the top margin, left margin and height*/
 /* Custom website font */
 @font-face {
   font-family: "Roboto Regular";
@@ -25,6 +27,7 @@ body {
 .main {
   /* Styles for the promotional section */
   /* Styles for the main destination container */
+  /* Styles for the ad section */
 }
 .main .promotional {
   position: relative;
@@ -118,6 +121,40 @@ body {
   top: 160px;
   font-size: 15px;
 }
+.main .advertisement {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  margin: 70px;
+  background: linear-gradient(to right, black, #537FE7);
+  border-radius: 10px;
+  height: 300px;
+  overflow: hidden;
+  /* Styles for the ad image container */
+  /*Styles for the ad content container */
+}
+.main .advertisement .advertisement-image {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  /*Styles for the ad image */
+}
+.main .advertisement .advertisement-image .advertisement-image__img {
+  margin-left: -450px;
+}
+.main .advertisement .advertisement-content {
+  margin-left: 10px;
+  /* Styles for the title and description of the content */
+  /* Style for the content subtitle */
+}
+.main .advertisement .advertisement-content .advertisement-content__title,
+.main .advertisement .advertisement-content .advertisement-content__description {
+  color: white;
+}
+.main .advertisement .advertisement-content .advertisement-content__subtitle {
+  color: #C0EEF2;
+}
 
 @media (min-width: 280px) and (max-width: 912px) {
   .main {
@@ -160,5 +197,126 @@ body {
   .main .destinations .destinations-cards {
     display: grid;
     grid-template-columns: 1fr;
+  }
+}
+/* Media queries from different mobile devices for the ad section*/
+@media (min-width: 280px) and (max-width: 414px) {
+  .main {
+    /* Styles for the ad section */
+  }
+  .main .advertisement {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    margin: 10px;
+    /* Styles for the ad image container */
+    /* Styles for the ad content container */
+  }
+  .main .advertisement .advertisement-image {
+    /* Styles for the ad image */
+  }
+  .main .advertisement .advertisement-image .advertisement-image__img {
+    margin-top: -200px;
+    height: 600px;
+    margin-left: -150px;
+  }
+  .main .advertisement .advertisement-content {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 540px) and (max-width: 550px) {
+  .main {
+    /* Styles for the ad section */
+  }
+  .main .advertisement {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    margin: 10px;
+    /* Styles for the ad image container */
+    /* Styles for the ad content container */
+  }
+  .main .advertisement .advertisement-image {
+    /* Styles for the ad image */
+  }
+  .main .advertisement .advertisement-image .advertisement-image__img {
+    margin-top: -300px;
+    height: 750px;
+    margin-left: -100px;
+  }
+  .main .advertisement .advertisement-content {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 778px) {
+  .main {
+    /* Styles for the ad section */
+  }
+  .main .advertisement {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    margin: 10px;
+    /* Styles for the ad image container */
+    /* Styles for the ad content container */
+  }
+  .main .advertisement .advertisement-image {
+    /* Styles for the ad image */
+  }
+  .main .advertisement .advertisement-image .advertisement-image__img {
+    margin-top: -350px;
+    height: 800px;
+    margin-left: -20px;
+  }
+  .main .advertisement .advertisement-content {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 820px) and (max-width: 830px) {
+  .main {
+    /* Styles for the ad section */
+  }
+  .main .advertisement {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    margin: 10px;
+    /* Styles for the ad image container */
+    /* Styles for the ad content container */
+  }
+  .main .advertisement .advertisement-image {
+    /* Styles for the ad image */
+  }
+  .main .advertisement .advertisement-image .advertisement-image__img {
+    margin-top: -370px;
+    height: 900px;
+    margin-left: -30px;
+  }
+  .main .advertisement .advertisement-content {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 912px) and (max-width: 922px) {
+  .main {
+    /* Styles for the ad section */
+  }
+  .main .advertisement {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    margin: 10px;
+    /* Styles for the ad image container */
+    /* Styles for the ad content container */
+  }
+  .main .advertisement .advertisement-image {
+    /* Styles for the ad image */
+  }
+  .main .advertisement .advertisement-image .advertisement-image__img {
+    margin-top: -380px;
+    height: 1000px;
+    margin-left: -50px;
+  }
+  .main .advertisement .advertisement-content {
+    margin-bottom: 30px;
   }
 }/*# sourceMappingURL=main.component.css.map */
