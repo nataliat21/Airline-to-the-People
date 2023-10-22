@@ -10,8 +10,8 @@
 /* Mixin to set the type of container position, the property left, top and background color */
 /* Mixin to set font size and font color*/
 /* Mixin to set position, font color, bottom, right and top */
-/* Mixin to set the number of columns, height and margin*/
-/* Mixin to change the top margin, left margin and height*/
+/* Mixin to set the number of columns and margin*/
+/* Mixin to set the top margin, left margin and right margin*/
 /* Custom website font */
 @font-face {
   font-family: "Roboto Regular";
@@ -129,7 +129,6 @@ body {
     height: 60px;
     /* Styles for left and right navigation bar elements on mobile */
     /* Styles for the container of the mobile version of the navigation bar */
-    /* end mine */
     /* Mobile menu style */
     /* Mobile information container style */
   }
@@ -167,7 +166,6 @@ body {
   .navbar .navbar-mobile-menu .navbar-mobile-menu-links {
     width: 100%;
     height: 100%;
-    transition: 0.5s ease;
     /* Style of links in the mobile menu */
   }
   .navbar .navbar-mobile-menu .navbar-mobile-menu-links .navbar-mobile-menu-links__link {
