@@ -55,14 +55,18 @@
     background-color: $footer-background-color;
     @include set-flex-align-and-justify-content(flex-end,flex-end);
     flex-direction: column;
-    padding-right: 145px;
+    // padding-right: 145px;
     padding-bottom: 20px;
+
+    .footer-information-social-media-desktop__title{
+      padding-right: 90px;
+    }
 
     /* Styles for the container that contains each of the icons*/
     .footer-information-social-media-desktop-icons{
       display: flex;
       flex-direction: row;
-      gap: 5px;
+      gap: 15px;
     }
 
   }

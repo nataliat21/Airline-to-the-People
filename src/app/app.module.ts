@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SharedService } from './services/shared.service';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

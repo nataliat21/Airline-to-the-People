@@ -91,14 +91,16 @@ body {
   align-items: flex-end;
   justify-content: flex-end;
   flex-direction: column;
-  padding-right: 145px;
   padding-bottom: 20px;
   /* Styles for the container that contains each of the icons*/
+}
+.footer .footer-information-social-media-desktop .footer-information-social-media-desktop__title {
+  padding-right: 90px;
 }
 .footer .footer-information-social-media-desktop .footer-information-social-media-desktop-icons {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 15px;
 }
 .footer .footer-aditionals {
   background-color: #F1F0FF;

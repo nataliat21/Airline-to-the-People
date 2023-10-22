@@ -10,8 +10,8 @@
 /* Mixin to set the type of container position, the property left, top and background color */
 /* Mixin to set font size and font color*/
 /* Mixin to set position, font color, bottom, right and top */
-/* Mixin to set the number of columns, height and margin*/
-/* Mixin to change the top margin, left margin and height*/
+/* Mixin to set the number of columns and margin*/
+/* Mixin to set the top margin, left margin and right margin*/
 /* Custom website font */
 @font-face {
   font-family: "Roboto Regular";
@@ -64,6 +64,7 @@ body {
   border: none;
   margin-top: 20px;
   padding: 10px 60px;
+  font-weight: bold;
 }
 .main .promotional .promotional-information .promotional-information__btn:hover {
   transition: 0.5s ease;
@@ -127,15 +128,15 @@ body {
   font-size: 15px;
 }
 .main .advertisement {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: 70px;
   background: linear-gradient(to right, black, #537FE7);
   border-radius: 10px;
-  height: 300px;
+  height: 400px;
   overflow: hidden;
+  position: relative;
   /* Styles for the ad image container */
   /*Styles for the ad content container */
 }
@@ -143,22 +144,32 @@ body {
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
+  border-radius: 50%;
+  margin-left: -200px;
   /*Styles for the ad image */
 }
 .main .advertisement .advertisement-image .advertisement-image__img {
-  margin-left: -450px;
+  width: 100%;
+  height: 100%;
 }
 .main .advertisement .advertisement-content {
-  margin-left: 10px;
+  margin-left: 100px;
   /* Styles for the title and description of the content */
   /* Style for the content subtitle */
 }
-.main .advertisement .advertisement-content .advertisement-content__title,
-.main .advertisement .advertisement-content .advertisement-content__description {
+.main .advertisement .advertisement-content .advertisement-content__title {
+  font-size: 35px;
   color: white;
+  margin-bottom: 0px;
 }
 .main .advertisement .advertisement-content .advertisement-content__subtitle {
+  font-size: 40px;
   color: #C0EEF2;
+  font-weight: 300;
+  margin-top: 0px;
+}
+.main .advertisement .advertisement-content .advertisement-content__description {
+  color: white;
 }
 
 @media (min-width: 280px) and (max-width: 912px) {
@@ -205,28 +216,83 @@ body {
   }
 }
 /* Media queries from different mobile devices for the ad section*/
-@media (min-width: 280px) and (max-width: 425px) {
+@media (min-width: 280px) and (max-width: 290px) {
   .main {
     /* Styles for the ad section */
   }
   .main .advertisement {
     display: grid;
     grid-template-columns: 1fr;
-    height: auto;
-    margin: 10px;
+    margin: 10px 10px 60px 10px;
     /* Styles for the ad image container */
     /* Styles for the ad content container */
   }
   .main .advertisement .advertisement-image {
+    margin-top: -20px;
+    margin-left: -10px;
+    margin-right: -10px;
     /* Styles for the ad image */
   }
   .main .advertisement .advertisement-image .advertisement-image__img {
-    margin-top: -300px;
-    height: 600px;
-    margin-left: -115px;
+    width: 100%;
+    height: 100%;
   }
   .main .advertisement .advertisement-content {
-    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-top: 150px;
+    /* Styles for the ad content title*/
+    /* Styles for the ad content subtitle*/
+    /* Styles for the description of the ad content*/
+  }
+  .main .advertisement .advertisement-content .advertisement-content__title {
+    font-size: 25px;
+  }
+  .main .advertisement .advertisement-content .advertisement-content__subtitle {
+    font-size: 25px;
+  }
+  .main .advertisement .advertisement-content .advertisement-content__description {
+    margin: 0px;
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 320px) and (max-width: 425px) {
+  .main {
+    /* Styles for the ad section */
+  }
+  .main .advertisement {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10px 10px 60px 10px;
+    height: 500px;
+    /* Styles for the ad image container */
+    /* Styles for the ad content container */
+  }
+  .main .advertisement .advertisement-image {
+    margin-top: -220px;
+    margin-left: -10px;
+    margin-right: -10px;
+    /* Styles for the ad image */
+  }
+  .main .advertisement .advertisement-image .advertisement-image__img {
+    width: 100%;
+    height: 100%;
+  }
+  .main .advertisement .advertisement-content {
+    margin-left: 10px;
+    margin-top: 20px;
+    /* Styles for the ad content title*/
+    /* Styles for the ad content subtitle*/
+    /* Styles for the description of the ad content*/
+  }
+  .main .advertisement .advertisement-content .advertisement-content__title {
+    font-size: 25px;
+  }
+  .main .advertisement .advertisement-content .advertisement-content__subtitle {
+    font-size: 25px;
+  }
+  .main .advertisement .advertisement-content .advertisement-content__description {
+    margin: 0px;
+    margin-bottom: 100px;
   }
 }
 @media (min-width: 540px) and (max-width: 550px) {
@@ -236,21 +302,33 @@ body {
   .main .advertisement {
     display: grid;
     grid-template-columns: 1fr;
-    height: auto;
-    margin: 10px;
+    margin: 10px 10px 60px 10px;
+    height: 500px;
     /* Styles for the ad image container */
     /* Styles for the ad content container */
   }
   .main .advertisement .advertisement-image {
+    margin-top: -120px;
+    margin-left: -10px;
+    margin-right: -10px;
     /* Styles for the ad image */
   }
   .main .advertisement .advertisement-image .advertisement-image__img {
-    margin-top: -300px;
-    height: 750px;
-    margin-left: -100px;
+    width: 100%;
+    height: 100%;
   }
   .main .advertisement .advertisement-content {
     margin-bottom: 30px;
+    margin-left: 10px;
+    margin-top: 180px;
+    /* Styles for the ad content title*/
+    /* Styles for the ad content subtitle*/
+  }
+  .main .advertisement .advertisement-content .advertisement-content__title {
+    font-size: 25px;
+  }
+  .main .advertisement .advertisement-content .advertisement-content__subtitle {
+    font-size: 25px;
   }
 }
 @media (min-width: 768px) and (max-width: 778px) {
@@ -260,21 +338,33 @@ body {
   .main .advertisement {
     display: grid;
     grid-template-columns: 1fr;
-    height: auto;
-    margin: 10px;
+    margin: 10px 10px 60px 10px;
+    height: 600px;
     /* Styles for the ad image container */
     /* Styles for the ad content container */
   }
   .main .advertisement .advertisement-image {
+    margin-top: -230px;
+    margin-left: -10px;
+    margin-right: -10px;
     /* Styles for the ad image */
   }
   .main .advertisement .advertisement-image .advertisement-image__img {
-    margin-top: -350px;
-    height: 800px;
-    margin-left: -20px;
+    width: 100%;
+    height: 100%;
   }
   .main .advertisement .advertisement-content {
     margin-bottom: 30px;
+    margin-left: 10px;
+    margin-top: 200px;
+    /* Styles for the ad content title*/
+    /* Styles for the ad content subtitle*/
+  }
+  .main .advertisement .advertisement-content .advertisement-content__title {
+    font-size: 25px;
+  }
+  .main .advertisement .advertisement-content .advertisement-content__subtitle {
+    font-size: 25px;
   }
 }
 @media (min-width: 820px) and (max-width: 830px) {
@@ -284,21 +374,33 @@ body {
   .main .advertisement {
     display: grid;
     grid-template-columns: 1fr;
-    height: auto;
-    margin: 10px;
+    margin: 10px 10px 60px 10px;
+    height: 600px;
     /* Styles for the ad image container */
     /* Styles for the ad content container */
   }
   .main .advertisement .advertisement-image {
+    margin-top: -250px;
+    margin-left: -10px;
+    margin-right: -10px;
     /* Styles for the ad image */
   }
   .main .advertisement .advertisement-image .advertisement-image__img {
-    margin-top: -370px;
-    height: 900px;
-    margin-left: -30px;
+    width: 100%;
+    height: 100%;
   }
   .main .advertisement .advertisement-content {
     margin-bottom: 30px;
+    margin-left: 10px;
+    margin-top: 200px;
+    /* Styles for the ad content title*/
+    /* Styles for the ad content subtitle*/
+  }
+  .main .advertisement .advertisement-content .advertisement-content__title {
+    font-size: 25px;
+  }
+  .main .advertisement .advertisement-content .advertisement-content__subtitle {
+    font-size: 25px;
   }
 }
 @media (min-width: 912px) and (max-width: 922px) {
@@ -308,20 +410,32 @@ body {
   .main .advertisement {
     display: grid;
     grid-template-columns: 1fr;
-    height: auto;
-    margin: 10px;
+    margin: 10px 10px 60px 10px;
+    height: 600px;
     /* Styles for the ad image container */
     /* Styles for the ad content container */
   }
   .main .advertisement .advertisement-image {
+    margin-top: -250px;
+    margin-left: -10px;
+    margin-right: -10px;
     /* Styles for the ad image */
   }
   .main .advertisement .advertisement-image .advertisement-image__img {
-    margin-top: -380px;
-    height: 1000px;
-    margin-left: -50px;
+    width: 100%;
+    height: 100%;
   }
   .main .advertisement .advertisement-content {
     margin-bottom: 30px;
+    margin-left: 10px;
+    margin-top: 200px;
+    /* Styles for the ad content title*/
+    /* Styles for the ad content subtitle*/
+  }
+  .main .advertisement .advertisement-content .advertisement-content__title {
+    font-size: 25px;
+  }
+  .main .advertisement .advertisement-content .advertisement-content__subtitle {
+    font-size: 25px;
   }
 }/*# sourceMappingURL=main.component.css.map */

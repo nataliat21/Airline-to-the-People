@@ -114,6 +114,50 @@
 
     }
 
+    // /* mine */
+
+    // .navbar-mobile-menu {
+    //   @include set-position-top-left-and-background-color(absolute, 0, 0, white);
+    //   display: block;
+    //   @include set-width-and-height(100%, 100%);
+    //   z-index: 2;
+
+    //   /* Menu icon bar style */
+    //   .navbar-mobile-menu-icons {
+    //      @include set-flex-align-and-justify-content(center, space-between);
+    //      background-color: white;
+    //      margin: 0px 10px;
+    //      height: 60px;
+    //   }
+
+    //   /* Container style for mobile menu links */
+    //   .navbar-mobile-menu-links {
+    //      @include set-width-and-height(100%, 100%);
+    //     transform: translateX(-100%);
+    //     transition: transform 1s;
+
+    //      /* Style of links in the mobile menu */
+    //      .navbar-mobile-menu-links__link {
+    //        @include set-color-font-and-text-decoration($primary-text-color, none);
+    //        display: flex;
+    //        flex-direction: column;
+    //        margin: 20px;
+    //        font-size: 15px;
+
+    //        /* Color change when hovering over links */
+    //        &:hover {
+    //          color: $hover-color-navigation-bar;
+    //        }
+    //      }
+    //   }
+    //  }
+
+    //  .navbar-mobile-menu:hover .navbar-mobile-menu-links {
+    //    transform: translateX(0%);
+    //  }
+
+
+    /* end mine */
     /* Mobile menu style */
     .navbar-mobile-menu{
       @include set-position-top-left-and-background-color(absolute, 0, 0, white);
