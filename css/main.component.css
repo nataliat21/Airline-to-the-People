@@ -170,6 +170,7 @@ body {
 }
 .main .advertisement .advertisement-content .advertisement-content__description {
   color: white;
+  padding-right: 350px;
 }
 
 @media (min-width: 280px) and (max-width: 912px) {
@@ -253,6 +254,7 @@ body {
   .main .advertisement .advertisement-content .advertisement-content__description {
     margin: 0px;
     margin-bottom: 100px;
+    padding-right: 10px;
   }
 }
 @media (min-width: 320px) and (max-width: 425px) {
@@ -293,6 +295,7 @@ body {
   .main .advertisement .advertisement-content .advertisement-content__description {
     margin: 0px;
     margin-bottom: 100px;
+    padding-right: 20px;
   }
 }
 @media (min-width: 540px) and (max-width: 550px) {
@@ -323,12 +326,16 @@ body {
     margin-top: 180px;
     /* Styles for the ad content title*/
     /* Styles for the ad content subtitle*/
+    /* Styles for the description of the ad content*/
   }
   .main .advertisement .advertisement-content .advertisement-content__title {
     font-size: 25px;
   }
   .main .advertisement .advertisement-content .advertisement-content__subtitle {
     font-size: 25px;
+  }
+  .main .advertisement .advertisement-content .advertisement-content__description {
+    padding-right: 25px;
   }
 }
 @media (min-width: 768px) and (max-width: 778px) {
@@ -359,12 +366,16 @@ body {
     margin-top: 200px;
     /* Styles for the ad content title*/
     /* Styles for the ad content subtitle*/
+    /* Styles for the description of the ad content*/
   }
   .main .advertisement .advertisement-content .advertisement-content__title {
     font-size: 25px;
   }
   .main .advertisement .advertisement-content .advertisement-content__subtitle {
     font-size: 25px;
+  }
+  .main .advertisement .advertisement-content .advertisement-content__description {
+    padding-right: 25px;
   }
 }
 @media (min-width: 820px) and (max-width: 830px) {
@@ -395,12 +406,16 @@ body {
     margin-top: 200px;
     /* Styles for the ad content title*/
     /* Styles for the ad content subtitle*/
+    /* Styles for the description of the ad content*/
   }
   .main .advertisement .advertisement-content .advertisement-content__title {
     font-size: 25px;
   }
   .main .advertisement .advertisement-content .advertisement-content__subtitle {
     font-size: 25px;
+  }
+  .main .advertisement .advertisement-content .advertisement-content__description {
+    padding-right: 80px;
   }
 }
 @media (min-width: 912px) and (max-width: 922px) {
@@ -431,11 +446,15 @@ body {
     margin-top: 200px;
     /* Styles for the ad content title*/
     /* Styles for the ad content subtitle*/
+    /* Styles for the description of the ad content*/
   }
   .main .advertisement .advertisement-content .advertisement-content__title {
     font-size: 25px;
   }
   .main .advertisement .advertisement-content .advertisement-content__subtitle {
     font-size: 25px;
+  }
+  .main .advertisement .advertisement-content .advertisement-content__description {
+    padding-right: 80px;
   }
 }/*# sourceMappingURL=main.component.css.map */

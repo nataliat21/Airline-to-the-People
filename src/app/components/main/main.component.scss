@@ -144,6 +144,7 @@
       }
       .advertisement-content__description{
         color: white;
+        padding-right: 350px;
       }
     }
   }
@@ -233,6 +234,7 @@
         .advertisement-content__description{
           margin: 0px;
           margin-bottom: 100px;
+          padding-right: 10px;
         }
 
       }
@@ -275,6 +277,7 @@
         .advertisement-content__description{
           margin: 0px;
           margin-bottom: 100px;
+          padding-right: 20px;
         }
       }
     }
@@ -310,6 +313,11 @@
         /* Styles for the ad content subtitle*/
         .advertisement-content__subtitle{
           font-size: 25px;
+        }
+
+        /* Styles for the description of the ad content*/
+        .advertisement-content__description{
+          padding-right: 25px;
         }
 
       }
@@ -350,6 +358,11 @@
           font-size: 25px;
         }
 
+        /* Styles for the description of the ad content*/
+        .advertisement-content__description{
+          padding-right: 25px;
+        }
+
       }
     }
   }
@@ -387,6 +400,11 @@
         .advertisement-content__subtitle{
           font-size: 25px;
         }
+
+        /* Styles for the description of the ad content*/
+        .advertisement-content__description{
+          padding-right: 80px;
+        }
       }
     }
   }
@@ -422,6 +440,11 @@
         /* Styles for the ad content subtitle*/
         .advertisement-content__subtitle{
           font-size: 25px;
+        }
+
+        /* Styles for the description of the ad content*/
+        .advertisement-content__description{
+          padding-right: 80px;
         }
       }
     }
