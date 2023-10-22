@@ -57,11 +57,16 @@
   .destinations{
     margin: 70px;
 
+    /* Styles for the destination container title*/
+    .destinations__title{
+      font-size: 30px;
+    }
+
     /*Styles for the destination card container */
     .destinations-cards{
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
-      gap: 10px;
+      gap: 20px;
 
       /* Styles for each destination card */
       .destinations-card{
@@ -79,7 +84,7 @@
           @include set-width-and-height(100%, 200px);
           @include set-background-color-and-border-radius( rgba(0, 0, 0, 0.397), 10px);
           position: absolute;
-          clip-path: ellipse(98% 95% at 100% 100%);
+          clip-path: ellipse(99% 97% at 100% 100%);
         }
 
         /* Styles for the destination card image */
@@ -92,13 +97,13 @@
         }
         /* Styles for the destination card title */
         .destinations-card__title{
-          @include set-position-font-color-bottom-right-top(absolute,white,0,10px,120px);
+          @include set-position-font-color-bottom-right-top(absolute,white,0,20px,90px);
         }
 
         /* Styles for the destination card text */
         .destinations-card__text{
-          @include set-position-font-color-bottom-right-top(absolute,white,0,10px,150px);
-          font-size: 15px;
+          @include set-position-font-color-bottom-right-top(absolute,white,0px,20px,140px);
+          font-size: 18px;
         }
       }
     }
@@ -193,6 +198,11 @@
     /* Styles for the main mobile destination container */
     .destinations{
       margin: 10px;
+
+      /* Styles for the destination container title*/
+      .destinations__title{
+        font-size: 20px;
+      }
 
       /* Styles for the destination card container */
       .destinations-cards{

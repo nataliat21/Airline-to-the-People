@@ -77,12 +77,16 @@ body {
 }
 .main .destinations {
   margin: 70px;
+  /* Styles for the destination container title*/
   /*Styles for the destination card container */
+}
+.main .destinations .destinations__title {
+  font-size: 30px;
 }
 .main .destinations .destinations-cards {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  gap: 10px;
+  gap: 20px;
   /* Styles for each destination card */
 }
 .main .destinations .destinations-cards .destinations-card {
@@ -105,8 +109,8 @@ body {
   background-color: rgba(0, 0, 0, 0.397);
   border-radius: 10px;
   position: absolute;
-  -webkit-clip-path: ellipse(98% 95% at 100% 100%);
-          clip-path: ellipse(98% 95% at 100% 100%);
+  -webkit-clip-path: ellipse(99% 97% at 100% 100%);
+          clip-path: ellipse(99% 97% at 100% 100%);
 }
 .main .destinations .destinations-cards .destinations-card .destinations-card__img {
   width: 100%;
@@ -120,16 +124,16 @@ body {
   position: absolute;
   color: white;
   bottom: 0;
-  right: 10px;
-  top: 120px;
+  right: 20px;
+  top: 90px;
 }
 .main .destinations .destinations-cards .destinations-card .destinations-card__text {
   position: absolute;
   color: white;
-  bottom: 0;
-  right: 10px;
-  top: 150px;
-  font-size: 15px;
+  bottom: 0px;
+  right: 20px;
+  top: 140px;
+  font-size: 18px;
 }
 .main .advertisement {
   display: flex;
@@ -215,7 +219,11 @@ body {
   }
   .main .destinations {
     margin: 10px;
+    /* Styles for the destination container title*/
     /* Styles for the destination card container */
+  }
+  .main .destinations .destinations__title {
+    font-size: 20px;
   }
   .main .destinations .destinations-cards {
     display: grid;
