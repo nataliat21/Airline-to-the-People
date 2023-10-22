@@ -51,10 +51,14 @@ body {
   /* Styles for the promotional section purchase button */
 }
 .main .promotional .promotional-information .promotional-information__title {
-  font-size: 40px;
+  font-size: 60px;
   color: white;
+  margin-bottom: 0px;
 }
 .main .promotional .promotional-information .promotional-information__text {
+  margin-top: 0px;
+  margin-right: 700px;
+  font-size: 20px;
   color: white;
 }
 .main .promotional .promotional-information .promotional-information__btn {
@@ -202,10 +206,12 @@ body {
   .main .promotional .promotional-information .promotional-information__title {
     font-size: 25px;
     color: white;
+    margin-bottom: 10px;
   }
   .main .promotional .promotional-information .promotional-information__text {
     font-size: 15px;
     color: white;
+    margin-right: 2px;
   }
   .main .destinations {
     margin: 10px;

@@ -24,12 +24,15 @@
 
       /* Styles for the title of the promotional section */
       .promotional-information__title{
-        @include set-font-size-and-font-color(40px, white);
+        @include set-font-size-and-font-color(60px, white);
+        margin-bottom: 0px;
       }
 
       /* Styles for the descriptive text of the promotional section */
       .promotional-information__text{
-        color: white;
+        margin-top: 0px;
+        margin-right: 700px;
+        @include set-font-size-and-font-color(20px, white);
       }
 
       /* Styles for the promotional section purchase button */
@@ -175,11 +178,13 @@
         /* Styles for the title of the promotional information container */
         .promotional-information__title{
           @include set-font-size-and-font-color(25px, white);
+          margin-bottom: 10px
         }
 
         /* Styles for the descriptive text of the promotional information container */
         .promotional-information__text{
           @include set-font-size-and-font-color(15px, white);
+          margin-right: 2px;
         }
 
       }
