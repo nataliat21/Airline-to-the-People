@@ -1,214 +1,336 @@
 @import '../../../styles.scss';
 
 /* Styles for the navigation bar */
-.navbar{
-  height: 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+// .navbar{
+//   height: 80px;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
 
-  /* Styles for the left part of the navigation bar */
-  .navbar-left{
-    @include flex-align(center);
-    margin-left: 40px;
+//   /* Styles for the left part of the navigation bar */
+//   .navbar-left{
+//     @include flex-align(center);
+//     margin-left: 40px;
+//     z-index: 2;
+
+//     /* Styles for the links on the left side of the navigation bar */
+//     .navbar-left__link{
+//       @include set-color-font-and-text-decoration($primary-text-color, none);
+//       margin: 10px;
+//       padding: 10px;
+//       white-space: nowrap;
+
+//       /* Styles for left side links on hover */
+//       &:hover{
+//         @include set-background-color-and-border-radius($hover-color-navigation-bar, 10px);
+//       }
+
+//       /* Styles for the Information link */
+//       &.navbar-left__link--information {
+//         position: relative;
+
+//         /* Styles for the modal window container*/
+//         .navbar-left-modal {
+//           @include set-position-left-transform-background-color-border-radius(absolute, 50%,translateX(-50%), white, 10px);
+//           top: 60px;
+//           box-shadow: 0px 0px 5px #d0d0dd;
+//           padding: 20px 55px;
+
+//           /*Styles for modal window icon*/
+//           .navbar-left-modal__icon{
+//             @include set-position-left-transform-background-color-border-radius(absolute, 50%,translateX(-50%), white, 20px);
+//             bottom: 140px;
+//           }
+
+//           /*Styles for modal window links*/
+//           .navbar-left-modal__link{
+//             @include set-color-font-and-text-decoration($primary-text-color, none);
+//             @include flex-align(center);
+//             @include set-flex-direction-and-justify-content(column, center);
+//             margin-bottom: 8px;
+//             font-size: 15px;
+
+
+//             &:hover{
+//               color: $hover-color-navigation-bar;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   /* Styles for the right part of the navigation bar */
+//   .navbar-right{
+//     @include set-flex-align-and-justify-content(center, flex-end);
+//     margin-right: 80px;
+
+//     /* Styles for the links on the right side of the navigation bar */
+//     .navbar-right__link{
+//       @include set-color-font-and-text-decoration($primary-text-color, none);
+//       @include flex-align(center);
+//       padding: 10px;
+
+//       /* Styles for right side links on hover */
+//       &:hover{
+//         @include set-background-color-and-border-radius($hover-color-navigation-bar, 10px);
+//       }
+
+//       /* Styles for the icons on the right side of the navigation bar */
+//       .navbar-right__icon{
+//         margin: 5px;
+//       }
+//     }
+//   }
+
+//   /* Styles to hide the mobile version of the navigation bar */
+//   .navbar-mobile{
+//     display: none;
+//   }
+
+//   /* Styles to hide the mobile version of the menu */
+//   .navbar-mobile-menu{
+//     display: none;
+//   }
+//   /* Styles to hide the menu information section on mobile devices */
+//   .navbar-mobile-information{
+//     display: none;
+//   }
+// }
+
+.navbar{
+  height: 40px;
+
+  /* Styles for the mobile navigation bar container*/
+  .navbar-mobile{
+    @include set-flex-align-and-justify-content(center, space-between);
+    margin: 5px 10px;
+    position: relative;
+  }
+  /* Styles for the navigation menu container in mobile version*/
+  .navbar-mobile-menu{
+    @include set-position-top-left-and-background-color(absolute, 0, 0, white);
+    display: block;
+    @include set-width-and-height(100%,100%);
     z-index: 2;
 
-    /* Styles for the links on the left side of the navigation bar */
-    .navbar-left__link{
-      @include set-color-font-and-text-decoration($primary-text-color, none);
-      margin: 10px;
-      padding: 10px;
-      white-space: nowrap;
+    &.slide-in {
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(-100%);
+    }
+    &.slide-in.show {
+      transform: translateX(0);
+    }
 
-      /* Styles for left side links on hover */
-      &:hover{
-        @include set-background-color-and-border-radius($hover-color-navigation-bar, 10px);
-      }
+    .navbar-mobile-menu-icons{
+      @include set-flex-align-and-justify-content(center, space-between);
+      background-color: white;
+      margin: 5px 10px;
+      height: 40px;
+    }
 
-      /* Styles for the Information link */
-      &.navbar-left__link--information {
-        position: relative;
+    .navbar-mobile-menu-links{
+      @include set-width-and-height(100%,auto);
+      margin-top: 50px;
 
-        /* Styles for the modal window container*/
-        .navbar-left-modal {
-          @include set-position-left-transform-background-color-border-radius(absolute, 50%,translateX(-50%), white, 10px);
-          top: 60px;
-          box-shadow: 0px 0px 5px #d0d0dd;
-          padding: 20px 55px;
+      .navbar-mobile-menu-links__link{
+        @include set-color-font-and-text-decoration($primary-text-color, none);
+        display: flex;
+        flex-direction: column;
+        margin: 25px 10px;
+        font-size: 15px;
 
-          /*Styles for modal window icon*/
-          .navbar-left-modal__icon{
-            @include set-position-left-transform-background-color-border-radius(absolute, 50%,translateX(-50%), white, 20px);
-            bottom: 140px;
-          }
-
-          /*Styles for modal window links*/
-          .navbar-left-modal__link{
-            @include set-color-font-and-text-decoration($primary-text-color, none);
-            @include flex-align(center);
-            @include set-flex-direction-and-justify-content(column, center);
-            margin-bottom: 8px;
-            font-size: 15px;
-
-
-            &:hover{
-              color: $hover-color-navigation-bar;
-            }
-          }
+        &:hover{
+          color: $hover-color-navigation-bar;
         }
       }
     }
   }
 
-  /* Styles for the right part of the navigation bar */
-  .navbar-right{
-    @include set-flex-align-and-justify-content(center, flex-end);
-    margin-right: 80px;
+  /*Styles for the information section container located within the mobile navigation bar menu */
+  .navbar-mobile-information{
+    @include set-position-top-left-and-background-color(absolute, 0, 0, white);
+    display: block;
+    @include set-width-and-height(100%,100%);
+    z-index: 2;
 
-    /* Styles for the links on the right side of the navigation bar */
-    .navbar-right__link{
-      @include set-color-font-and-text-decoration($primary-text-color, none);
-      @include flex-align(center);
-      padding: 10px;
+    &.slide-in {
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(-100%);
+    }
+    &.slide-in.show {
+      transform: translateX(0);
+    }
 
-      /* Styles for right side links on hover */
-      &:hover{
-        @include set-background-color-and-border-radius($hover-color-navigation-bar, 10px);
-      }
+    .navbar-mobile-information-icons{
+      @include set-flex-align-and-justify-content(center, space-between);
+      background-color: white;
+      margin: 5px 10px;
+      height: 40px;
+    }
 
-      /* Styles for the icons on the right side of the navigation bar */
-      .navbar-right__icon{
-        margin: 5px;
+    .navbar-mobile-information__h3{
+      margin-left: 10px;
+      margin-top: 50px;
+    }
+
+    .navbar-mobile-information-links{
+      @include set-width-and-height(100%,auto);
+      transition: 0.5s ease;
+
+      .navbar-mobile-information-links__link{
+        @include set-color-font-and-text-decoration($primary-text-color, none);
+        display: flex;
+        flex-direction: column;
+        margin: 20px 40px;
+        font-size: 15px;
+
+        &:hover{
+          color: $hover-color-navigation-bar;
+        }
       }
     }
   }
-
-  /* Styles to hide the mobile version of the navigation bar */
-  .navbar-mobile{
-    display: none;
-  }
-
-  /* Styles to hide the mobile version of the menu */
-  .navbar-mobile-menu{
-    display: none;
-  }
-  /* Styles to hide the menu information section on mobile devices */
-  .navbar-mobile-information{
-    display: none;
-  }
 }
 
-@media (min-width: 280px) and (max-width: 912px){
-  /* Styles for the navigation bar in mobile view */
+@media (min-width: 768px){
   .navbar{
-    grid-template-columns: 1fr;
-    justify-content: center;
-    height: 60px;
 
-    /* Styles for left and right navigation bar elements on mobile */
-    .navbar-left,
-    .navbar-right{
+    /* Styles for the mobile navigation bar container on desktop*/
+    .navbar-mobile{
       display: none;
     }
 
-    /* Styles for the container of the mobile version of the navigation bar */
-    .navbar-mobile{
-      @include set-flex-align-and-justify-content(center, space-between);
-      margin: 0px 10px;
-      position: relative;
-
-    }
-
-    /* Mobile menu style */
+    /* Styles for the navigation menu container on desktop*/
     .navbar-mobile-menu{
-      @include set-position-top-left-and-background-color(absolute, 0, 0, white);
-      display: block;
-      @include set-width-and-height(100%,100%);
-      z-index: 2;
-
-      &.slide-in {
-        transition: transform 0.3s ease-in-out;
-        transform: translateX(-100%);
-      }
-      &.slide-in.show {
-        transform: translateX(0);
-      }
-
-      /* Menu icon bar style */
-      .navbar-mobile-menu-icons{
-        @include set-flex-align-and-justify-content(center, space-between);
-        background-color: white;
-        margin: 0px 10px;
-        height: 60px;
-      }
-
-      /* Container style for mobile menu links */
-      .navbar-mobile-menu-links{
-        @include set-width-and-height(100%,100%);
-
-        /* Style of links in the mobile menu */
-        .navbar-mobile-menu-links__link{
-          @include set-color-font-and-text-decoration($primary-text-color, none);
-          display: flex;
-          flex-direction: column;
-          margin: 20px;
-          font-size: 15px;
-
-          /* Color change when hovering over links */
-          &:hover{
-            color: $hover-color-navigation-bar;
-          }
-        }
-      }
+      display: none;
     }
 
-    /* Mobile information container style */
+    /*Styles for the container of the information section located within the navigation bar menu */
     .navbar-mobile-information{
-      @include set-position-top-left-and-background-color(absolute, 0, 0, white);
-      display: block;
-      @include set-width-and-height(100%,100%);
-      z-index: 2;
-
-      &.slide-in {
-        transition: transform 0.3s ease-in-out;
-        transform: translateX(-100%);
-      }
-      &.slide-in.show {
-        transform: translateX(0);
-      }
-
-      /* Information icon bar style */
-      .navbar-mobile-information-icons{
-        @include set-flex-align-and-justify-content(center, space-between);
-        background-color: white;
-        margin: 0 10px;
-        height: 60px;
-      }
-
-      /* Information container title style */
-      .navbar-mobile-information__h3{
-        margin-left: 10px;
-      }
-
-      /* Container style for mobile information links */
-      .navbar-mobile-information-links{
-        @include set-width-and-height(100%,100%);
-        transition: 0.5s ease;
-
-        /* Style of the links in the mobile information container */
-        .navbar-mobile-information-links__link{
-          @include set-color-font-and-text-decoration($primary-text-color, none);
-          display: flex;
-          flex-direction: column;
-          margin: 30px;
-          font-size: 15px;
-
-          /* Color change when hovering over links */
-          &:hover{
-            color: $hover-color-navigation-bar;
-          }
-        }
-      }
+      display: none;
     }
-
   }
 }
+
+
+
+
+
+
+
+
+// @media (min-width: 280px) and (max-width: 912px){
+//   /* Styles for the navigation bar in mobile view */
+//   .navbar{
+//     grid-template-columns: 1fr;
+//     justify-content: center;
+//     height: 60px;
+
+//     /* Styles for left and right navigation bar elements on mobile */
+//     .navbar-left,
+//     .navbar-right{
+//       display: none;
+//     }
+
+//     /* Styles for the container of the mobile version of the navigation bar */
+//     .navbar-mobile{
+//       @include set-flex-align-and-justify-content(center, space-between);
+//       margin: 0px 10px;
+//       position: relative;
+
+//     }
+
+//     /* Mobile menu style */
+//     .navbar-mobile-menu{
+//       @include set-position-top-left-and-background-color(absolute, 0, 0, white);
+//       display: block;
+//       @include set-width-and-height(100%,100%);
+//       z-index: 2;
+
+//       &.slide-in {
+//         transition: transform 0.3s ease-in-out;
+//         transform: translateX(-100%);
+//       }
+//       &.slide-in.show {
+//         transform: translateX(0);
+//       }
+
+//       /* Menu icon bar style */
+//       .navbar-mobile-menu-icons{
+//         @include set-flex-align-and-justify-content(center, space-between);
+//         background-color: white;
+//         margin: 0px 10px;
+//         height: 60px;
+//       }
+
+//       /* Container style for mobile menu links */
+//       .navbar-mobile-menu-links{
+//         @include set-width-and-height(100%,100%);
+
+//         /* Style of links in the mobile menu */
+//         .navbar-mobile-menu-links__link{
+//           @include set-color-font-and-text-decoration($primary-text-color, none);
+//           display: flex;
+//           flex-direction: column;
+//           margin: 20px;
+//           font-size: 15px;
+
+//           /* Color change when hovering over links */
+//           &:hover{
+//             color: $hover-color-navigation-bar;
+//           }
+//         }
+//       }
+//     }
+
+//     /* Mobile information container style */
+//     .navbar-mobile-information{
+//       @include set-position-top-left-and-background-color(absolute, 0, 0, white);
+//       display: block;
+//       @include set-width-and-height(100%,100%);
+//       z-index: 2;
+
+//       &.slide-in {
+//         transition: transform 0.3s ease-in-out;
+//         transform: translateX(-100%);
+//       }
+//       &.slide-in.show {
+//         transform: translateX(0);
+//       }
+
+//       /* Information icon bar style */
+//       .navbar-mobile-information-icons{
+//         @include set-flex-align-and-justify-content(center, space-between);
+//         background-color: white;
+//         margin: 0 10px;
+//         height: 60px;
+//       }
+
+//       /* Information container title style */
+//       .navbar-mobile-information__h3{
+//         margin-left: 10px;
+//       }
+
+//       /* Container style for mobile information links */
+//       .navbar-mobile-information-links{
+//         @include set-width-and-height(100%,100%);
+//         transition: 0.5s ease;
+
+//         /* Style of the links in the mobile information container */
+//         .navbar-mobile-information-links__link{
+//           @include set-color-font-and-text-decoration($primary-text-color, none);
+//           display: flex;
+//           flex-direction: column;
+//           margin: 30px;
+//           font-size: 15px;
+
+//           /* Color change when hovering over links */
+//           &:hover{
+//             color: $hover-color-navigation-bar;
+//           }
+//         }
+//       }
+//     }
+
+//   }
+// }
