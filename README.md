@@ -1,4 +1,4 @@
-## Airline to town
+## Airline to the people
 
 This project is a web design that replicates the airline "Airline to the people", which was developed using the Angular framework. The main objective of this creation is to show the design and user interface of the airline "Airline to the people", thus providing an example of how to create visually attractive web pages with Angular.
 
