@@ -10,6 +10,10 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'airline-to-the-people';
+  showMenu = false;
+  hiddeComponents(showMenu:boolean){
+    this.showMenu = showMenu;
+  }
 }
 
 

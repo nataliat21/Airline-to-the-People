@@ -91,6 +91,10 @@
   .navbar-mobile-menu{
     display: none;
   }
+  /* Styles to hide the menu information section on mobile devices */
+  .navbar-mobile-information{
+    display: none;
+  }
 }
 
 @media (min-width: 280px) and (max-width: 912px){
@@ -120,6 +124,14 @@
       display: block;
       @include set-width-and-height(100%,100%);
       z-index: 2;
+
+      &.slide-in {
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+      }
+      &.slide-in.show {
+        transform: translateX(0);
+      }
 
       /* Menu icon bar style */
       .navbar-mobile-menu-icons{
@@ -155,6 +167,14 @@
       display: block;
       @include set-width-and-height(100%,100%);
       z-index: 2;
+
+      &.slide-in {
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+      }
+      &.slide-in.show {
+        transform: translateX(0);
+      }
 
       /* Information icon bar style */
       .navbar-mobile-information-icons{

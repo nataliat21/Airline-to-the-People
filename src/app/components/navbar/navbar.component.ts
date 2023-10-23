@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+@Output() menuShowing=new EventEmitter<boolean>()
 
 
   showModal = false; /*Property to control the visibility of the modal window*/
@@ -21,6 +22,7 @@ export class NavbarComponent {
   // Feature to toggle menu visibility
   toggleMenu() {
     this.showMenu = !this.showMenu;
+    this.menuShowing.emit(this.showMenu);
   }
 
 

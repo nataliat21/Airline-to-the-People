@@ -33,6 +33,7 @@ body {
   /* Styles for the right part of the navigation bar */
   /* Styles to hide the mobile version of the navigation bar */
   /* Styles to hide the mobile version of the menu */
+  /* Styles to hide the menu information section on mobile devices */
 }
 .navbar .navbar-left {
   display: flex;
@@ -120,6 +121,9 @@ body {
 .navbar .navbar-mobile-menu {
   display: none;
 }
+.navbar .navbar-mobile-information {
+  display: none;
+}
 
 @media (min-width: 280px) and (max-width: 912px) {
   /* Styles for the navigation bar in mobile view */
@@ -154,6 +158,13 @@ body {
     z-index: 2;
     /* Menu icon bar style */
     /* Container style for mobile menu links */
+  }
+  .navbar .navbar-mobile-menu.slide-in {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+  }
+  .navbar .navbar-mobile-menu.slide-in.show {
+    transform: translateX(0);
   }
   .navbar .navbar-mobile-menu .navbar-mobile-menu-icons {
     display: flex;
@@ -192,6 +203,13 @@ body {
     /* Information icon bar style */
     /* Information container title style */
     /* Container style for mobile information links */
+  }
+  .navbar .navbar-mobile-information.slide-in {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+  }
+  .navbar .navbar-mobile-information.slide-in.show {
+    transform: translateX(0);
   }
   .navbar .navbar-mobile-information .navbar-mobile-information-icons {
     display: flex;
