@@ -53,7 +53,7 @@
   </div>
 
   <!-- Main mobile menu container -->
-  <div class="navbar-mobile-menu"  *ngIf="showMenu">
+  <div class="navbar-mobile-menu slide-in"  [class.show]="showMenu">
     <!-- Container for icons and logo -->
       <div class="navbar-mobile-menu-icons">
         <!-- Icon to close the menu -->
@@ -81,7 +81,7 @@
   </div>
 
   <!-- Information container in the mobile navigation bar -->
-  <div class="navbar-mobile-information" *ngIf="showInformation">
+  <div class="navbar-mobile-information slide-in" [class.show]="showInformation">
     <!-- Container for icons -->
     <div class="navbar-mobile-information-icons">
 

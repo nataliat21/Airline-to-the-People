@@ -67,17 +67,16 @@
   top: $top;
 }
 
-/* Mixin to set the number of columns, height and margin*/
-@mixin set-grid-template-columns-height-margin($grid-template-columns,$height,$margin){
+/* Mixin to set the number of columns and margin*/
+@mixin set-grid-template-columns-height-margin($grid-template-columns,$margin){
   display: grid;
   grid-template-columns: $grid-template-columns;
-  height: $height;
   margin: $margin;
 }
 
-/* Mixin to change the top margin, left margin and height*/
-@mixin set-margin-top-height-margin-left($margin-top, $height, $margin-left){
+/* Mixin to set the top margin, left margin and right margin*/
+@mixin set-margin-top-left-right($margin-top, $margin-left, $margin-right){
   margin-top: $margin-top;
-  height: $height;
   margin-left: $margin-left;
+  margin-right: $margin-right;
 }

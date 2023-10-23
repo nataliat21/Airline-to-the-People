@@ -10,8 +10,8 @@
 /* Mixin to set the type of container position, the property left, top and background color */
 /* Mixin to set font size and font color*/
 /* Mixin to set position, font color, bottom, right and top */
-/* Mixin to set the number of columns, height and margin*/
-/* Mixin to change the top margin, left margin and height*/
+/* Mixin to set the number of columns and margin*/
+/* Mixin to set the top margin, left margin and right margin*/
 /* Custom website font */
 @font-face {
   font-family: "Roboto Regular";
@@ -26,7 +26,6 @@ body {
 
 .footer {
   /* Styles for the footer info section container */
-  /* Styles for the social media icon container and title on desktop */
   /*Styles for the container of additional information on the footer*/
 }
 .footer .footer-information {
@@ -36,11 +35,11 @@ body {
   padding: 10px 0px;
   /* Styles for the image container */
   /* Styles for the social media icon container and title on mobile */
-  /* Styles for the container that contains policy, destination and flight information */
+  /* Styles for the container that contains policy, destination, flight information and social media icons */
 }
 .footer .footer-information .footer-information-image {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 .footer .footer-information .footer-information-image .footer-information-image__img--mobile {
@@ -52,53 +51,60 @@ body {
 .footer .footer-information .footer-information-travel {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /*Styles for each policy, destination and flight container*/
+  /*Styles for each policy and destination container*/
+  /*Styles for the container of social media icons and quick flight information*/
 }
 .footer .footer-information .footer-information-travel .footer-information-travel-destinations,
-.footer .footer-information .footer-information-travel .footer-information-travel-policy,
-.footer .footer-information .footer-information-travel .footer-information-travel-flight {
+.footer .footer-information .footer-information-travel .footer-information-travel-policy {
   display: flex;
   flex-direction: column;
-  /* Styles for policy, destination and flight links*/
+  /* Styles for policy and destination links*/
 }
 .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-destinations__link,
 .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-policy__link,
-.footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-flight__link,
 .footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-destinations__link,
-.footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-policy__link,
-.footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-flight__link,
-.footer .footer-information .footer-information-travel .footer-information-travel-flight .footer-information-travel-destinations__link,
-.footer .footer-information .footer-information-travel .footer-information-travel-flight .footer-information-travel-policy__link,
-.footer .footer-information .footer-information-travel .footer-information-travel-flight .footer-information-travel-flight__link {
+.footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-policy__link {
   color: black;
   text-decoration: none;
   margin-bottom: 5px;
 }
 .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-destinations__link:hover,
 .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-policy__link:hover,
-.footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-flight__link:hover,
 .footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-destinations__link:hover,
-.footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-policy__link:hover,
-.footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-flight__link:hover,
-.footer .footer-information .footer-information-travel .footer-information-travel-flight .footer-information-travel-destinations__link:hover,
-.footer .footer-information .footer-information-travel .footer-information-travel-flight .footer-information-travel-policy__link:hover,
-.footer .footer-information .footer-information-travel .footer-information-travel-flight .footer-information-travel-flight__link:hover {
+.footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-policy__link:hover {
   color: #537FE7;
 }
-.footer .footer-information-social-media-desktop {
-  background-color: #E7E6F6;
+.footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-content: flex-start;
+  /*Styles for the quick flight information container*/
+  /* Styles for the social media icon container and title on desktop */
+}
+.footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-flights {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
   flex-direction: column;
-  padding-right: 145px;
+  /*Styles for quick flight information links*/
+}
+.footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-flights .footer-information-travel-flight-media-container-flights__link {
+  color: black;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+.footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-flights .footer-information-travel-flight-media-container-flights__link:hover {
+  color: #537FE7;
+}
+.footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-social-media-desktop {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 20px;
   /* Styles for the container that contains each of the icons*/
 }
-.footer .footer-information-social-media-desktop .footer-information-social-media-desktop-icons {
+.footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-social-media-desktop .footer-information-travel-flight-media-container-social-media-desktop-icons {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 15px;
 }
 .footer .footer-aditionals {
   background-color: #F1F0FF;
@@ -115,7 +121,6 @@ body {
 @media (min-width: 280px) and (max-width: 912px) {
   .footer {
     /* Styles for the footer info section container  on mobile*/
-    /* Styles for the social media icon container and title on desktop */
     /*Styles for the container of additional information on the footer*/
   }
   .footer .footer-information {
@@ -137,9 +142,12 @@ body {
   }
   .footer .footer-information .footer-information-image .footer-information-image__img--mobile {
     display: block;
+    padding: 20px 0px;
   }
   .footer .footer-information .footer-information-social-media-mobile {
     display: block;
+    padding-top: 20px;
+    padding-bottom: 30px;
     /* Styles for the container that contains each of the icons*/
   }
   .footer .footer-information .footer-information-social-media-mobile .footer-information-social-media-mobile-icons {
@@ -150,8 +158,26 @@ body {
   }
   .footer .footer-information .footer-information-travel {
     grid-template-columns: 1fr;
+    /* Styles for the container de policy, destination and flight information */
   }
-  .footer .footer-information-social-media-desktop {
+  .footer .footer-information .footer-information-travel .footer-information-travel-destinations,
+  .footer .footer-information .footer-information-travel .footer-information-travel-policy {
+    /* Styles for policy, destination and flight information links */
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-destinations__link,
+  .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-policy__link,
+  .footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-destinations__link,
+  .footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-policy__link {
+    margin-left: 10px;
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container {
+    grid-template-rows: 1fr;
+    /* Styles for the social media icon container and title on desktop */
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-flights .footer-information-travel-flight-media-container-flights__link {
+    margin-left: 10px;
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-social-media-desktop {
     display: none;
   }
   .footer .footer-aditionals {
