@@ -2,7 +2,7 @@
 
 .main{
 
-  /* Styles for the promotional section on mobile devices*/
+  /* Styles for the promotional section*/
   .promotional{
     position: relative;
     z-index: 1;
@@ -50,7 +50,7 @@
     }
   }
 
-  /* Styles for the destination container on devices*/
+  /* Styles for the destinations section*/
   .destinations{
     margin: 10px;
 
@@ -98,12 +98,106 @@
       }
     }
   }
+
+  /* Styles for the ad section*/
+  .advertisement{
+    @include set-grid-template-columns-height-margin(1fr, 10px 10px 60px 10px);
+    margin: 10px;
+    background: linear-gradient(to bottom,black,$hover-color-navigation-bar);
+    border-radius: 15px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+
+    .advertisement-image{
+      display: flex;
+      justify-content: flex-start;
+      border-radius: 50%;
+      margin-top: -150px;
+
+      .advertisement-image__img{
+        @include set-width-and-height(100%, 100%);
+      }
+    }
+
+    .advertisement-content{
+      margin-left: 15px;
+      margin-top: 10px;
+
+      .advertisement-content__title{
+        @include set-font-size-and-font-color(30px, white);
+        margin-bottom: 0px;
+      }
+
+      .advertisement-content__subtitle{
+        @include set-font-size-and-font-color(30px, $ad-section-subtitle-color);
+        font-weight: 300;
+        margin-top: 0px;
+      }
+
+      .advertisement-content__description{
+        margin: 0px;
+        margin-bottom: 100px;
+        max-width: 300px;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (min-width: 400px) and (max-width: 575px) {
+  .main{
+    /* Styles for the ad section*/
+    .advertisement{
+      height: 500px;
+
+      .advertisement-image{
+        margin-top: -220px;
+      }
+
+      .advertisement-content{
+
+        .advertisement-content__description{
+          margin: 0px;
+          margin-bottom: 100px;
+          max-width: 450px;
+          color: white;
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .main{
+
+    /* Styles for the ad section*/
+    .advertisement{
+      height: 600px;
+
+      .advertisement-image{
+        margin-top: -300px;
+      }
+
+      .advertisement-content{
+
+        .advertisement-content__description{
+          margin: 0px;
+          margin-bottom: 100px;
+          max-width: 550px;
+          color: white;
+        }
+      }
+    }
+  }
+
 }
 
 @media (min-width: 768px){
   .main{
 
-    /* Styles for the destination container*/
+    /* Styles for the destinations section*/
     .destinations{
       margin: 40px 70px;
 
@@ -111,11 +205,11 @@
         grid-template-columns: 1fr 2fr 1fr;
       }
     }
+
   }
 }
 
-
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .main{
 
     /* Styles for the promotional section*/
@@ -150,18 +244,45 @@
         }
       }
     }
-
-    // .destinations{
-    //   margin: 40px 70px;
-
-    //   .destinations-cards{
-    //     grid-template-columns: 1fr 2fr 1fr;
-    //   }
-    // }
   }
 }
 
-@media (min-width: 993px){
+@media (min-width: 768px) and (max-width: 1199px){
+  .main{
+    /* Styles for the ad section*/
+    .advertisement{
+      @include set-flex-align-and-justify-content(center, center);
+      margin: 70px;
+      background: linear-gradient(to right,black,$hover-color-navigation-bar);
+      height: 390px;
+
+      .advertisement-image{
+        margin-left: -150px;
+        margin-top: -10px;
+      }
+
+      .advertisement-content{
+        margin-left: 70px;
+        margin-top: 70px;
+        margin-right: 10px;
+
+        .advertisement-content__title{
+          @include set-font-size-and-font-color(40px, white);
+        }
+
+        .advertisement-content__subtitle{
+          @include set-font-size-and-font-color(40px, $ad-section-subtitle-color);
+        }
+        .advertisement-content__description{
+          max-width: 500px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px){
   .main{
 
     /* Styles for the promotional section*/
@@ -199,477 +320,39 @@
   }
 }
 
+@media (min-width: 1200px){
+  .main{
+    /* Styles for the ad section*/
+    .advertisement{
+      @include set-flex-align-and-justify-content(center, center);
+      margin: 70px;
+      background: linear-gradient(to right,black,$hover-color-navigation-bar);
+      height: 390px;
+
+      .advertisement-image{
+        margin-left: -600px;
+        margin-top: 30px;
+      }
+
+      .advertisement-content{
+        margin-left: 70px;
+        margin-top: 70px;
+        margin-right: 10px;
+
+        .advertisement-content__title{
+          @include set-font-size-and-font-color(40px, white);
+        }
+
+        .advertisement-content__subtitle{
+          @include set-font-size-and-font-color(40px, $ad-section-subtitle-color);
+        }
+        .advertisement-content__description{
+          max-width: 500px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
 
-
-
-
-
-
-
-// .main{
-//   /* Styles for the promotional section */
-//   // .promotional{
-//   //   position: relative;
-//   //   z-index: 1;
-
-//   //   /* Styles for the promotional image */
-//   //   .promotional__img--desktop{
-//   //     @include set-width-and-height(100%, 100%);
-
-//   //   }
-
-//   //   .promotional__img--mobile{
-//   //     display: none;
-//   //   }
-
-//   //   /* Styles for the promotional information container */
- //.promotional-information{
-//         top: 40px;
-//         left: 10px;
-//         margin: 5px;
-
-//         /* Styles for the title of the promotional information container */
-//         .promotional-information__title{
-//           @include set-font-size-and-font-color(25px, white);
-//           margin-bottom: 10px
-//         }
-
-//         /* Styles for the descriptive text of the promotional information container */
-//         .promotional-information__text{
-//           @include set-font-size-and-font-color(15px, white);
-//           margin-right: 2px;
-//         }
-
-//       }
-
-//   //     /* Styles for the promotional section purchase button */
-//   //     .promotional-information__btn{
-//   //       @include set-background-color-and-border-radius( $promotional-section-button-color, 20px);
-//   //       color: white;
-//   //       border: none;
-//   //       margin-top: 20px;
-//   //       padding: 10px 60px;
-//   //       font-weight: bold;
-
-//   //       &:hover{
-//   //         transition: 0.5s ease;
-//   //         background-color: rgba(0, 0, 0, 0.356);
-//   //         border: 1px solid white;
-//   //       }
-//   //     }
-//   //   }
-//   // }
-
-//   /* Styles for the main destination container */
-//   // .destinations{
-//   //   margin: 70px;
-
-//   //   /* Styles for the destination container title*/
-//   //   .destinations__title{
-//   //     font-size: 30px;
-//   //   }
-
-//   //   /*Styles for the destination card container */
-//   //   .destinations-cards{
-//   //     display: grid;
-//   //     grid-template-columns: 1fr 2fr 1fr;
-//   //     gap: 20px;
-
-//   //     /* Styles for each destination card */
-//   //     .destinations-card{
-//   //       @include set-width-and-height(100%, 200px);
-//   //       position: relative;
-//   //       transition: transform 0.5s;
-
-//   //       &:hover{
-//   //         transform: translateY(-5px);
-//   //       }
-
-//   //       /* Styles to add an elliptical background layer to the image */
-//   //       &::before {
-//   //         content: "";
-//   //         @include set-width-and-height(100%, 200px);
-//   //         @include set-background-color-and-border-radius( rgba(0, 0, 0, 0.397), 10px);
-//   //         position: absolute;
-//   //         clip-path: ellipse(99% 97% at 100% 100%);
-//   //       }
-
-//   //       /* Styles for the destination card image */
-//   //       .destinations-card__img{
-//   //         @include set-width-and-height(100%, 100%);
-//   //         object-fit: cover;
-//   //         border-radius: 10px;
-//   //         gap: 10px;
-
-//   //       }
-//   //       /* Styles for the destination card title */
-//   //       .destinations-card__title{
-//   //         @include set-position-font-color-bottom-right-top(absolute,white,0,20px,90px);
-//   //       }
-
-//   //       /* Styles for the destination card text */
-//   //       .destinations-card__text{
-//   //         @include set-position-font-color-bottom-right-top(absolute,white,0px,20px,140px);
-//   //         font-size: 18px;
-//   //       }
-//   //     }
-//   //   }
-//   // }
-
-//   /* Styles for the ad section */
-//   // .advertisement{
-//   //   @include set-flex-align-and-justify-content(center, center);
-//   //   margin: 70px;
-//   //   background: linear-gradient(to right,black,$hover-color-navigation-bar);
-//   //   border-radius: 10px;
-//   //   height: 400px;
-//   //   overflow: hidden;
-//   //   position: relative;
-
-//   //   /* Styles for the ad image container */
-//   //   .advertisement-image{
-//   //     display: flex;
-//   //     justify-content: flex-start;
-//   //     overflow: hidden;
-//   //     border-radius: 50%;
-//   //     margin-left: -200px;
-
-
-//   //     /*Styles for the ad image */
-//   //     .advertisement-image__img{
-//   //       @include set-width-and-height(100%, 100%);
-//   //     }
-//   //   }
-
-//   //   /*Styles for the ad content container */
-//   //   .advertisement-content{
-//   //     margin-left: 100px;
-
-//   //     /* Styles for the title and description of the content */
-//   //     .advertisement-content__title{
-//   //       @include set-font-size-and-font-color(35px, white);
-//   //       margin-bottom: 0px;
-//   //     }
-
-//   //     /* Style for the content subtitle */
-//   //     .advertisement-content__subtitle{
-//   //       @include set-font-size-and-font-color(40px, $ad-section-subtitle-color);
-//   //       font-weight: 300;
-//   //       margin-top: 0px;
-//   //     }
-//   //     .advertisement-content__description{
-//   //       color: white;
-//   //       padding-right: 350px;
-//   //     }
-//   //   }
-//   // }
-// }
-
-// @media (min-width: 280px) and (max-width: 912px){
-//   .main{
-//     /* Styles for the promotional section on mobile */
-//     .promotional{
-//       z-index: 1;
-//       /* Styles for the promotional image on desktop devices (hidden) */
-//       .promotional__img--desktop{
-//         display: none;
-//       }
-
-//       /* Styles for the promotional image on mobile devices */
-//       .promotional__img--mobile{
-//         display: block;
-//         @include set-width-and-height(100%, 100%);
-//       }
-
-//       /* Styles for the promotional information container */
-//       .promotional-information{
-//         top: 40px;
-//         left: 10px;
-//         margin: 5px;
-
-//         /* Styles for the title of the promotional information container */
-//         .promotional-information__title{
-//           @include set-font-size-and-font-color(25px, white);
-//           margin-bottom: 10px
-//         }
-
-//         /* Styles for the descriptive text of the promotional information container */
-//         .promotional-information__text{
-//           @include set-font-size-and-font-color(15px, white);
-//           margin-right: 2px;
-//         }
-
-//       }
-//     }
-
-//     /* Styles for the main mobile destination container */
-//     .destinations{
-//       margin: 10px;
-
-//       /* Styles for the destination container title*/
-//       .destinations__title{
-//         font-size: 20px;
-//       }
-
-//       /* Styles for the destination card container */
-//       .destinations-cards{
-//         display: grid;
-//         grid-template-columns: 1fr;
-//       }
-//     }
-
-//   }
-// }
-
-/* Media queries from different mobile devices for the ad section*/
-// @media (min-width: 280px) and (max-width: 290px){
-//   .main{
-//     /* Styles for the ad section */
-//     .advertisement{
-//       @include set-grid-template-columns-height-margin(1fr, 10px 10px 60px 10px);
-
-//       /* Styles for the ad image container */
-//       .advertisement-image{
-//         @include set-margin-top-left-right(-20px, -10px, -10px);
-
-//         /* Styles for the ad image */
-//         .advertisement-image__img{
-//           @include set-width-and-height(100%, 100%);
-//         }
-//       }
-//       /* Styles for the ad content container */
-//       .advertisement-content{
-//         margin-left: 10px;
-//         margin-top: 150px;
-
-//         /* Styles for the ad content title*/
-//         .advertisement-content__title{
-//           font-size: 25px;
-//         }
-
-//         /* Styles for the ad content subtitle*/
-//         .advertisement-content__subtitle{
-//           font-size: 25px;
-//         }
-
-//         /* Styles for the description of the ad content*/
-//         .advertisement-content__description{
-//           margin: 0px;
-//           margin-bottom: 100px;
-//           padding-right: 10px;
-//         }
-
-//       }
-//     }
-//   }
-// }
-
-// @media (min-width: 320px) and (max-width: 425px){
-//   .main{
-//     /* Styles for the ad section */
-//     .advertisement{
-//       @include set-grid-template-columns-height-margin(1fr, 10px 10px 60px 10px);
-//       height: 500px;
-
-//       /* Styles for the ad image container */
-//       .advertisement-image{
-//         @include set-margin-top-left-right(-220px, -10px, -10px);
-
-//         /* Styles for the ad image */
-//         .advertisement-image__img{
-//           @include set-width-and-height(100%, 100%);
-//         }
-//       }
-//       /* Styles for the ad content container */
-//       .advertisement-content{
-//         margin-left: 10px;
-//         margin-top: 20px;
-
-//         /* Styles for the ad content title*/
-//         .advertisement-content__title{
-//           font-size: 25px;
-//         }
-
-//         /* Styles for the ad content subtitle*/
-//         .advertisement-content__subtitle{
-//           font-size: 25px;
-//         }
-
-//         /* Styles for the description of the ad content*/
-//         .advertisement-content__description{
-//           margin: 0px;
-//           margin-bottom: 100px;
-//           padding-right: 20px;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media  (min-width: 540px) and (max-width: 550px){
-//   .main{
-//     /* Styles for the ad section */
-//     .advertisement{
-//       @include set-grid-template-columns-height-margin(1fr, 10px 10px 60px 10px);
-//       height: 500px;
-
-//       /* Styles for the ad image container */
-//       .advertisement-image{ @include set-margin-top-left-right(-120px, -10px, -10px);
-
-//         /* Styles for the ad image */
-//         .advertisement-image__img{
-//           @include set-width-and-height(100%, 100%);
-//         }
-//       }
-//       /* Styles for the ad content container */
-//       .advertisement-content{
-//         margin-bottom: 30px;
-//         margin-left: 10px;
-//         margin-top: 180px;
-
-//         /* Styles for the ad content title*/
-//         .advertisement-content__title{
-//           font-size: 25px;
-//         }
-
-//         /* Styles for the ad content subtitle*/
-//         .advertisement-content__subtitle{
-//           font-size: 25px;
-//         }
-
-//         /* Styles for the description of the ad content*/
-//         .advertisement-content__description{
-//           padding-right: 25px;
-//         }
-
-//       }
-//     }
-//   }
-
-// }
-
-// @media  (min-width: 768px) and (max-width: 778px){
-//   .main{
-//     /* Styles for the ad section */
-//     .advertisement{
-//       @include set-grid-template-columns-height-margin(1fr, 10px 10px 60px 10px);
-//       height: 600px;
-
-//       /* Styles for the ad image container */
-//       .advertisement-image{
-//         @include set-margin-top-left-right(-230px, -10px, -10px);
-
-//         /* Styles for the ad image */
-//         .advertisement-image__img{
-//           @include set-width-and-height(100%, 100%);
-//         }
-//       }
-//       /* Styles for the ad content container */
-//       .advertisement-content{
-//         margin-bottom: 30px;
-//         margin-left: 10px;
-//         margin-top: 200px;
-
-//         /* Styles for the ad content title*/
-//         .advertisement-content__title{
-//           font-size: 25px;
-//         }
-
-//         /* Styles for the ad content subtitle*/
-//         .advertisement-content__subtitle{
-//           font-size: 25px;
-//         }
-
-//         /* Styles for the description of the ad content*/
-//         .advertisement-content__description{
-//           padding-right: 25px;
-//         }
-
-//       }
-//     }
-//   }
-
-// }
-
-// @media  (min-width: 820px) and (max-width: 830px){
-//   .main{
-//  /* Styles for the ad section */
-//     .advertisement{
-//     @include set-grid-template-columns-height-margin(1fr, 10px 10px 60px 10px);
-//     height: 600px;
-
-//     /* Styles for the ad image container */
-//       .advertisement-image{
-//         @include set-margin-top-left-right(-250px, -10px, -10px);
-
-//         /* Styles for the ad image */
-//         .advertisement-image__img{
-//           @include set-width-and-height(100%, 100%);
-//         }
-//       }
-//     /* Styles for the ad content container */
-//       .advertisement-content{
-//         margin-bottom: 30px;
-//         margin-left: 10px;
-//         margin-top: 200px;
-
-//         /* Styles for the ad content title*/
-//         .advertisement-content__title{
-//           font-size: 25px;
-//         }
-
-//         /* Styles for the ad content subtitle*/
-//         .advertisement-content__subtitle{
-//           font-size: 25px;
-//         }
-
-//         /* Styles for the description of the ad content*/
-//         .advertisement-content__description{
-//           padding-right: 80px;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media  (min-width: 912px) and (max-width: 922px){
-//   .main{
-//      /* Styles for the ad section */
-//     .advertisement{
-//       @include set-grid-template-columns-height-margin(1fr, 10px 10px 60px 10px);
-//       height: 600px;
-
-//     /* Styles for the ad image container */
-//       .advertisement-image{
-//         @include set-margin-top-left-right(-250px, -10px, -10px);
-
-//         /* Styles for the ad image */
-//         .advertisement-image__img{
-//           @include set-width-and-height(100%, 100%);
-//         }
-//       }
-//       /* Styles for the ad content container */
-//       .advertisement-content{
-//         margin-bottom: 30px;
-//         margin-left: 10px;
-//         margin-top: 200px;
-
-//         /* Styles for the ad content title*/
-//         .advertisement-content__title{
-//           font-size: 25px;
-//         }
-
-//         /* Styles for the ad content subtitle*/
-//         .advertisement-content__subtitle{
-//           font-size: 25px;
-//         }
-
-//         /* Styles for the description of the ad content*/
-//         .advertisement-content__description{
-//           padding-right: 80px;
-//         }
-//       }
-//     }
-//   }
-// }
 

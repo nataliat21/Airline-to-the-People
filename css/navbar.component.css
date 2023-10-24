@@ -26,11 +26,11 @@ body {
 
 .navbar {
   height: 40px;
-  /* Styles for the mobile navigation bar container*/
-  /* Styles for the navigation menu container in mobile version*/
-  /*Styles for the information section container located within the mobile navigation bar menu in mobile version */
-  /* Styles for the link container on the left side of the navigation bar on the desktop*/
-  /*Styles for the links container on the right side of the navigation bar on desktop */
+  /* Styles for the navigation bar on mobile devices*/
+  /* Styles for the navigation bar menu on mobile devices*/
+  /*Styles for the information section found within the navigation bar menu on mobile devices */
+  /* Styles for the left navigation bar on desktop*/
+  /* Styles for the right navigation bar on desktop */
 }
 .navbar .navbar-mobile {
   display: flex;
@@ -140,8 +140,8 @@ body {
     /* Styles for the mobile navigation bar container*/
     /* Styles for the navigation menu container in mobile version*/
     /*Styles for the container of the information section located within the navigation bar menu in mobile version */
-    /* Styles for the links container on the left side of the navigation bar on the desktop*/
-    /*Styles for the links container on the right side of the navigation bar on desktop */
+    /* Styles for the left navigation bar on desktop*/
+    /*Styles for the right navigation bar on desktop */
   }
   .navbar .navbar-mobile {
     display: none;
