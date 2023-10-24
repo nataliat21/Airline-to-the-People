@@ -24,220 +24,212 @@ body {
   padding: 0px;
 }
 
-/* Styles for the navigation bar */
 .navbar {
-  height: 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* Styles for the left part of the navigation bar */
-  /* Styles for the right part of the navigation bar */
-  /* Styles to hide the mobile version of the navigation bar */
-  /* Styles to hide the mobile version of the menu */
-  /* Styles to hide the menu information section on mobile devices */
-}
-.navbar .navbar-left {
-  display: flex;
-  align-items: center;
-  margin-left: 40px;
-  z-index: 2;
-  /* Styles for the links on the left side of the navigation bar */
-}
-.navbar .navbar-left .navbar-left__link {
-  color: black;
-  text-decoration: none;
-  margin: 10px;
-  padding: 10px;
-  white-space: nowrap;
-  /* Styles for left side links on hover */
-  /* Styles for the Information link */
-}
-.navbar .navbar-left .navbar-left__link:hover {
-  background-color: #537FE7;
-  border-radius: 10px;
-}
-.navbar .navbar-left .navbar-left__link.navbar-left__link--information {
-  position: relative;
-  /* Styles for the modal window container*/
-}
-.navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  border-radius: 10px;
-  top: 60px;
-  box-shadow: 0px 0px 5px #d0d0dd;
-  padding: 20px 55px;
-  /*Styles for modal window icon*/
-  /*Styles for modal window links*/
-}
-.navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal .navbar-left-modal__icon {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  border-radius: 20px;
-  bottom: 140px;
-}
-.navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal .navbar-left-modal__link {
-  color: black;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 8px;
-  font-size: 15px;
-}
-.navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal .navbar-left-modal__link:hover {
-  color: #537FE7;
-}
-.navbar .navbar-right {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 80px;
-  /* Styles for the links on the right side of the navigation bar */
-}
-.navbar .navbar-right .navbar-right__link {
-  color: black;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  /* Styles for right side links on hover */
-  /* Styles for the icons on the right side of the navigation bar */
-}
-.navbar .navbar-right .navbar-right__link:hover {
-  background-color: #537FE7;
-  border-radius: 10px;
-}
-.navbar .navbar-right .navbar-right__link .navbar-right__icon {
-  margin: 5px;
+  height: 40px;
+  /* Styles for the navigation bar on mobile devices*/
+  /* Styles for the navigation bar menu on mobile devices*/
+  /*Styles for the information section found within the navigation bar menu on mobile devices */
+  /* Styles for the left navigation bar on desktop*/
+  /* Styles for the right navigation bar on desktop */
 }
 .navbar .navbar-mobile {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 10px;
+  position: relative;
 }
 .navbar .navbar-mobile-menu {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.navbar .navbar-mobile-menu.slide-in {
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+.navbar .navbar-mobile-menu.slide-in.show {
+  transform: translateX(0);
+}
+.navbar .navbar-mobile-menu .navbar-mobile-menu-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  margin: 5px 10px;
+  height: 40px;
+}
+.navbar .navbar-mobile-menu .navbar-mobile-menu-links {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+.navbar .navbar-mobile-menu .navbar-mobile-menu-links .navbar-mobile-menu-links__link {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  margin: 25px 10px;
+  font-size: 15px;
+}
+.navbar .navbar-mobile-menu .navbar-mobile-menu-links .navbar-mobile-menu-links__link:hover {
+  color: #537FE7;
 }
 .navbar .navbar-mobile-information {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.navbar .navbar-mobile-information.slide-in {
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+.navbar .navbar-mobile-information.slide-in.show {
+  transform: translateX(0);
+}
+.navbar .navbar-mobile-information .navbar-mobile-information-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  margin: 5px 10px;
+  height: 40px;
+}
+.navbar .navbar-mobile-information .navbar-mobile-information__h3 {
+  margin-left: 10px;
+  margin-top: 50px;
+}
+.navbar .navbar-mobile-information .navbar-mobile-information-links {
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+}
+.navbar .navbar-mobile-information .navbar-mobile-information-links .navbar-mobile-information-links__link {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 40px;
+  font-size: 15px;
+}
+.navbar .navbar-mobile-information .navbar-mobile-information-links .navbar-mobile-information-links__link:hover {
+  color: #537FE7;
+}
+.navbar .navbar-left {
+  display: none;
+}
+.navbar .navbar-right {
   display: none;
 }
 
-@media (min-width: 280px) and (max-width: 912px) {
-  /* Styles for the navigation bar in mobile view */
+@media (min-width: 768px) {
   .navbar {
-    grid-template-columns: 1fr;
-    justify-content: center;
-    height: 60px;
-    /* Styles for left and right navigation bar elements on mobile */
-    /* Styles for the container of the mobile version of the navigation bar */
-    /* Mobile menu style */
-    /* Mobile information container style */
-  }
-  .navbar .navbar-left,
-  .navbar .navbar-right {
-    display: none;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Styles for the mobile navigation bar container*/
+    /* Styles for the navigation menu container in mobile version*/
+    /*Styles for the container of the information section located within the navigation bar menu in mobile version */
+    /* Styles for the left navigation bar on desktop*/
+    /*Styles for the right navigation bar on desktop */
   }
   .navbar .navbar-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0px 10px;
-    position: relative;
+    display: none;
   }
   .navbar .navbar-mobile-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: white;
-    display: block;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    /* Menu icon bar style */
-    /* Container style for mobile menu links */
-  }
-  .navbar .navbar-mobile-menu.slide-in {
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(-100%);
-  }
-  .navbar .navbar-mobile-menu.slide-in.show {
-    transform: translateX(0);
-  }
-  .navbar .navbar-mobile-menu .navbar-mobile-menu-icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    margin: 0px 10px;
-    height: 60px;
-  }
-  .navbar .navbar-mobile-menu .navbar-mobile-menu-links {
-    width: 100%;
-    height: 100%;
-    /* Style of links in the mobile menu */
-  }
-  .navbar .navbar-mobile-menu .navbar-mobile-menu-links .navbar-mobile-menu-links__link {
-    color: black;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    font-size: 15px;
-    /* Color change when hovering over links */
-  }
-  .navbar .navbar-mobile-menu .navbar-mobile-menu-links .navbar-mobile-menu-links__link:hover {
-    color: #537FE7;
+    display: none;
   }
   .navbar .navbar-mobile-information {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: white;
-    display: block;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    /* Information icon bar style */
-    /* Information container title style */
-    /* Container style for mobile information links */
+    display: none;
   }
-  .navbar .navbar-mobile-information.slide-in {
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(-100%);
-  }
-  .navbar .navbar-mobile-information.slide-in.show {
-    transform: translateX(0);
-  }
-  .navbar .navbar-mobile-information .navbar-mobile-information-icons {
+  .navbar .navbar-left {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-left: 25px;
+    z-index: 2;
+  }
+  .navbar .navbar-left .navbar-left__link {
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+    white-space: nowrap;
+    font-size: 15px;
+  }
+  .navbar .navbar-left .navbar-left__link:hover {
+    background-color: #537FE7;
+    border-radius: 10px;
+  }
+  .navbar .navbar-left .navbar-left__link.navbar-left__link--information {
+    position: relative;
+  }
+  .navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: white;
-    margin: 0 10px;
-    height: 60px;
+    border-radius: 20px;
+    top: 60px;
+    box-shadow: 0px 0px 5px #d0d0dd;
+    width: 240px;
+    height: 180px;
   }
-  .navbar .navbar-mobile-information .navbar-mobile-information__h3 {
-    margin-left: 10px;
+  .navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal .navbar-left-modal__icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 25px;
+    bottom: 175px;
   }
-  .navbar .navbar-mobile-information .navbar-mobile-information-links {
-    width: 100%;
-    height: 100%;
-    transition: 0.5s ease;
-    /* Style of the links in the mobile information container */
+  .navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal .navbar-left-modal-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 33px;
+    margin-top: 33px;
+    margin-bottom: 40px;
+    gap: 13px;
   }
-  .navbar .navbar-mobile-information .navbar-mobile-information-links .navbar-mobile-information-links__link {
+  .navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal .navbar-left-modal-links .navbar-left-modal-links__link {
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal .navbar-left-modal-links .navbar-left-modal-links__link:hover {
+    color: #537FE7;
+  }
+  .navbar .navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+  .navbar .navbar-right .navbar-right__link {
     color: black;
     text-decoration: none;
     display: flex;
-    flex-direction: column;
-    margin: 30px;
+    align-items: center;
+    padding: 10px;
     font-size: 15px;
-    /* Color change when hovering over links */
   }
-  .navbar .navbar-mobile-information .navbar-mobile-information-links .navbar-mobile-information-links__link:hover {
-    color: #537FE7;
+  .navbar .navbar-right .navbar-right__link:hover {
+    background-color: #537FE7;
+    border-radius: 10px;
+  }
+  .navbar .navbar-right .navbar-right__link .navbar-right__icon {
+    margin: 5px;
   }
 }/*# sourceMappingURL=navbar.component.css.map */

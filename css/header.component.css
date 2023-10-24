@@ -10,8 +10,8 @@
 /* Mixin to set the type of container position, the property left, top and background color */
 /* Mixin to set font size and font color*/
 /* Mixin to set position, font color, bottom, right and top */
-/* Mixin to set the number of columns, height and margin*/
-/* Mixin to change the top margin, left margin and height*/
+/* Mixin to set the number of columns and margin*/
+/* Mixin to set the top margin, left margin and right margin*/
 /* Custom website font */
 @font-face {
   font-family: "Roboto Regular";
@@ -24,16 +24,15 @@ body {
   padding: 0px;
 }
 
-/* Styles for the header */
 .header {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  display: none;
 }
 
-@media (min-width: 280px) and (max-width: 912px) {
+@media (min-width: 768px) {
   .header {
-    display: none;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }/*# sourceMappingURL=header.component.css.map */
