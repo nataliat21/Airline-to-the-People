@@ -175,7 +175,6 @@
     /* Styles for the ad section*/
     .advertisement{
       height: 600px;
-
       .advertisement-image{
         margin-top: -300px;
       }
@@ -252,7 +251,7 @@
     /* Styles for the ad section*/
     .advertisement{
       @include set-flex-align-and-justify-content(center, center);
-      margin: 70px;
+      margin: 20px 70px;
       background: linear-gradient(to right,black,$hover-color-navigation-bar);
       height: 390px;
 
@@ -325,7 +324,7 @@
     /* Styles for the ad section*/
     .advertisement{
       @include set-flex-align-and-justify-content(center, center);
-      margin: 70px;
+      margin: 20px 70px;
       background: linear-gradient(to right,black,$hover-color-navigation-bar);
       height: 390px;
 
