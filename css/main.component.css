@@ -24,451 +24,129 @@ body {
   padding: 0px;
 }
 
-.main {
-  /* Styles for the promotional section */
-  /* Styles for the main destination container */
-  /* Styles for the ad section */
-}
 .main .promotional {
   position: relative;
   z-index: 1;
-  /* Styles for the promotional image */
-  /* Styles for the promotional information container */
 }
 .main .promotional .promotional__img--desktop {
+  display: none;
+}
+.main .promotional .promotional__img--mobile {
+  display: block;
   width: 100%;
   height: 100%;
 }
-.main .promotional .promotional__img--mobile {
-  display: none;
-}
 .main .promotional .promotional-information {
   position: absolute;
-  top: 80px;
-  left: 80px;
-  /* Styles for the title of the promotional section */
-  /* Styles for the descriptive text of the promotional section */
-  /* Styles for the promotional section purchase button */
+  top: 35px;
+  left: 10px;
+  margin: 5px;
 }
 .main .promotional .promotional-information .promotional-information__title {
-  font-size: 60px;
+  font-size: 25px;
   color: white;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 .main .promotional .promotional-information .promotional-information__text {
-  margin-top: 0px;
-  margin-right: 700px;
-  font-size: 20px;
+  font-size: 15px;
   color: white;
+  max-width: 400px;
 }
 .main .promotional .promotional-information .promotional-information__btn {
   background-color: #C20114;
   border-radius: 20px;
   color: white;
   border: none;
-  margin-top: 20px;
+  margin-top: 15px;
   padding: 10px 60px;
   font-weight: bold;
+  font-size: 17px;
 }
 .main .promotional .promotional-information .promotional-information__btn:hover {
   transition: 0.5s ease;
   background-color: rgba(0, 0, 0, 0.356);
   border: 1px solid white;
 }
-.main .destinations {
-  margin: 70px;
-  /* Styles for the destination container title*/
-  /*Styles for the destination card container */
-}
-.main .destinations .destinations__title {
-  font-size: 30px;
-}
-.main .destinations .destinations-cards {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 20px;
-  /* Styles for each destination card */
-}
-.main .destinations .destinations-cards .destinations-card {
-  width: 100%;
-  height: 200px;
-  position: relative;
-  transition: transform 0.5s;
-  /* Styles to add an elliptical background layer to the image */
-  /* Styles for the destination card image */
-  /* Styles for the destination card title */
-  /* Styles for the destination card text */
-}
-.main .destinations .destinations-cards .destinations-card:hover {
-  transform: translateY(-5px);
-}
-.main .destinations .destinations-cards .destinations-card::before {
-  content: "";
-  width: 100%;
-  height: 200px;
-  background-color: rgba(0, 0, 0, 0.397);
-  border-radius: 10px;
-  position: absolute;
-  -webkit-clip-path: ellipse(99% 97% at 100% 100%);
-          clip-path: ellipse(99% 97% at 100% 100%);
-}
-.main .destinations .destinations-cards .destinations-card .destinations-card__img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 10px;
-  gap: 10px;
-}
-.main .destinations .destinations-cards .destinations-card .destinations-card__title {
-  position: absolute;
-  color: white;
-  bottom: 0;
-  right: 20px;
-  top: 90px;
-}
-.main .destinations .destinations-cards .destinations-card .destinations-card__text {
-  position: absolute;
-  color: white;
-  bottom: 0px;
-  right: 20px;
-  top: 140px;
-  font-size: 18px;
-}
-.main .advertisement {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 70px;
-  background: linear-gradient(to right, black, #537FE7);
-  border-radius: 10px;
-  height: 400px;
-  overflow: hidden;
-  position: relative;
-  /* Styles for the ad image container */
-  /*Styles for the ad content container */
-}
-.main .advertisement .advertisement-image {
-  display: flex;
-  justify-content: flex-start;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-left: -200px;
-  /*Styles for the ad image */
-}
-.main .advertisement .advertisement-image .advertisement-image__img {
-  width: 100%;
-  height: 100%;
-}
-.main .advertisement .advertisement-content {
-  margin-left: 100px;
-  /* Styles for the title and description of the content */
-  /* Style for the content subtitle */
-}
-.main .advertisement .advertisement-content .advertisement-content__title {
-  font-size: 35px;
-  color: white;
-  margin-bottom: 0px;
-}
-.main .advertisement .advertisement-content .advertisement-content__subtitle {
-  font-size: 40px;
-  color: #C0EEF2;
-  font-weight: 300;
-  margin-top: 0px;
-}
-.main .advertisement .advertisement-content .advertisement-content__description {
-  color: white;
-  padding-right: 350px;
-}
 
-@media (min-width: 280px) and (max-width: 912px) {
-  .main {
-    /* Styles for the promotional section on mobile */
-    /* Styles for the main mobile destination container */
-  }
-  .main .promotional {
-    z-index: 1;
-    /* Styles for the promotional image on desktop devices (hidden) */
-    /* Styles for the promotional image on mobile devices */
-    /* Styles for the promotional information container */
-  }
+@media (min-width: 768px) and (max-width: 992px) {
   .main .promotional .promotional__img--desktop {
-    display: none;
-  }
-  .main .promotional .promotional__img--mobile {
     display: block;
     width: 100%;
     height: 100%;
   }
+  .main .promotional .promotional__img--mobile {
+    display: none;
+  }
   .main .promotional .promotional-information {
-    top: 40px;
-    left: 10px;
-    margin: 5px;
-    /* Styles for the title of the promotional information container */
-    /* Styles for the descriptive text of the promotional information container */
+    left: 80px;
   }
   .main .promotional .promotional-information .promotional-information__title {
-    font-size: 25px;
+    font-size: 55px;
     color: white;
     margin-bottom: 10px;
+    margin-top: 0px;
   }
   .main .promotional .promotional-information .promotional-information__text {
-    font-size: 15px;
-    color: white;
-    margin-right: 2px;
-  }
-  .main .destinations {
-    margin: 10px;
-    /* Styles for the destination container title*/
-    /* Styles for the destination card container */
-  }
-  .main .destinations .destinations__title {
     font-size: 20px;
-  }
-  .main .destinations .destinations-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-/* Media queries from different mobile devices for the ad section*/
-@media (min-width: 280px) and (max-width: 290px) {
-  .main {
-    /* Styles for the ad section */
-  }
-  .main .advertisement {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 10px 10px 60px 10px;
-    /* Styles for the ad image container */
-    /* Styles for the ad content container */
-  }
-  .main .advertisement .advertisement-image {
-    margin-top: -20px;
-    margin-left: -10px;
-    margin-right: -10px;
-    /* Styles for the ad image */
-  }
-  .main .advertisement .advertisement-image .advertisement-image__img {
-    width: 100%;
-    height: 100%;
-  }
-  .main .advertisement .advertisement-content {
-    margin-left: 10px;
-    margin-top: 150px;
-    /* Styles for the ad content title*/
-    /* Styles for the ad content subtitle*/
-    /* Styles for the description of the ad content*/
-  }
-  .main .advertisement .advertisement-content .advertisement-content__title {
-    font-size: 25px;
-  }
-  .main .advertisement .advertisement-content .advertisement-content__subtitle {
-    font-size: 25px;
-  }
-  .main .advertisement .advertisement-content .advertisement-content__description {
+    color: white;
     margin: 0px;
-    margin-bottom: 100px;
-    padding-right: 10px;
+    max-width: 600px;
   }
-}
-@media (min-width: 320px) and (max-width: 425px) {
-  .main {
-    /* Styles for the ad section */
-  }
-  .main .advertisement {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 10px 10px 60px 10px;
-    height: 500px;
-    /* Styles for the ad image container */
-    /* Styles for the ad content container */
-  }
-  .main .advertisement .advertisement-image {
-    margin-top: -220px;
-    margin-left: -10px;
-    margin-right: -10px;
-    /* Styles for the ad image */
-  }
-  .main .advertisement .advertisement-image .advertisement-image__img {
-    width: 100%;
-    height: 100%;
-  }
-  .main .advertisement .advertisement-content {
-    margin-left: 10px;
+  .main .promotional .promotional-information .promotional-information__btn {
+    background-color: #C20114;
+    border-radius: 20px;
+    color: white;
+    border: none;
     margin-top: 20px;
-    /* Styles for the ad content title*/
-    /* Styles for the ad content subtitle*/
-    /* Styles for the description of the ad content*/
+    padding: 10px 60px;
+    font-weight: bold;
+    font-size: 15px;
   }
-  .main .advertisement .advertisement-content .advertisement-content__title {
-    font-size: 25px;
+  .main .promotional .promotional-information .promotional-information__btn:hover {
+    transition: 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.356);
+    border: 1px solid white;
   }
-  .main .advertisement .advertisement-content .advertisement-content__subtitle {
-    font-size: 25px;
+}
+@media (min-width: 993px) {
+  .main .promotional .promotional__img--desktop {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
-  .main .advertisement .advertisement-content .advertisement-content__description {
+  .main .promotional .promotional__img--mobile {
+    display: none;
+  }
+  .main .promotional .promotional-information {
+    top: 100px;
+    left: 80px;
+  }
+  .main .promotional .promotional-information .promotional-information__title {
+    font-size: 55px;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+  .main .promotional .promotional-information .promotional-information__text {
+    font-size: 20px;
+    color: white;
     margin: 0px;
-    margin-bottom: 100px;
-    padding-right: 20px;
+    max-width: 600px;
+  }
+  .main .promotional .promotional-information .promotional-information__btn {
+    background-color: #C20114;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    margin-top: 35px;
+    padding: 10px 60px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .main .promotional .promotional-information .promotional-information__btn:hover {
+    transition: 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.356);
+    border: 1px solid white;
   }
 }
-@media (min-width: 540px) and (max-width: 550px) {
-  .main {
-    /* Styles for the ad section */
-  }
-  .main .advertisement {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 10px 10px 60px 10px;
-    height: 500px;
-    /* Styles for the ad image container */
-    /* Styles for the ad content container */
-  }
-  .main .advertisement .advertisement-image {
-    margin-top: -120px;
-    margin-left: -10px;
-    margin-right: -10px;
-    /* Styles for the ad image */
-  }
-  .main .advertisement .advertisement-image .advertisement-image__img {
-    width: 100%;
-    height: 100%;
-  }
-  .main .advertisement .advertisement-content {
-    margin-bottom: 30px;
-    margin-left: 10px;
-    margin-top: 180px;
-    /* Styles for the ad content title*/
-    /* Styles for the ad content subtitle*/
-    /* Styles for the description of the ad content*/
-  }
-  .main .advertisement .advertisement-content .advertisement-content__title {
-    font-size: 25px;
-  }
-  .main .advertisement .advertisement-content .advertisement-content__subtitle {
-    font-size: 25px;
-  }
-  .main .advertisement .advertisement-content .advertisement-content__description {
-    padding-right: 25px;
-  }
-}
-@media (min-width: 768px) and (max-width: 778px) {
-  .main {
-    /* Styles for the ad section */
-  }
-  .main .advertisement {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 10px 10px 60px 10px;
-    height: 600px;
-    /* Styles for the ad image container */
-    /* Styles for the ad content container */
-  }
-  .main .advertisement .advertisement-image {
-    margin-top: -230px;
-    margin-left: -10px;
-    margin-right: -10px;
-    /* Styles for the ad image */
-  }
-  .main .advertisement .advertisement-image .advertisement-image__img {
-    width: 100%;
-    height: 100%;
-  }
-  .main .advertisement .advertisement-content {
-    margin-bottom: 30px;
-    margin-left: 10px;
-    margin-top: 200px;
-    /* Styles for the ad content title*/
-    /* Styles for the ad content subtitle*/
-    /* Styles for the description of the ad content*/
-  }
-  .main .advertisement .advertisement-content .advertisement-content__title {
-    font-size: 25px;
-  }
-  .main .advertisement .advertisement-content .advertisement-content__subtitle {
-    font-size: 25px;
-  }
-  .main .advertisement .advertisement-content .advertisement-content__description {
-    padding-right: 25px;
-  }
-}
-@media (min-width: 820px) and (max-width: 830px) {
-  .main {
-    /* Styles for the ad section */
-  }
-  .main .advertisement {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 10px 10px 60px 10px;
-    height: 600px;
-    /* Styles for the ad image container */
-    /* Styles for the ad content container */
-  }
-  .main .advertisement .advertisement-image {
-    margin-top: -250px;
-    margin-left: -10px;
-    margin-right: -10px;
-    /* Styles for the ad image */
-  }
-  .main .advertisement .advertisement-image .advertisement-image__img {
-    width: 100%;
-    height: 100%;
-  }
-  .main .advertisement .advertisement-content {
-    margin-bottom: 30px;
-    margin-left: 10px;
-    margin-top: 200px;
-    /* Styles for the ad content title*/
-    /* Styles for the ad content subtitle*/
-    /* Styles for the description of the ad content*/
-  }
-  .main .advertisement .advertisement-content .advertisement-content__title {
-    font-size: 25px;
-  }
-  .main .advertisement .advertisement-content .advertisement-content__subtitle {
-    font-size: 25px;
-  }
-  .main .advertisement .advertisement-content .advertisement-content__description {
-    padding-right: 80px;
-  }
-}
-@media (min-width: 912px) and (max-width: 922px) {
-  .main {
-    /* Styles for the ad section */
-  }
-  .main .advertisement {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 10px 10px 60px 10px;
-    height: 600px;
-    /* Styles for the ad image container */
-    /* Styles for the ad content container */
-  }
-  .main .advertisement .advertisement-image {
-    margin-top: -250px;
-    margin-left: -10px;
-    margin-right: -10px;
-    /* Styles for the ad image */
-  }
-  .main .advertisement .advertisement-image .advertisement-image__img {
-    width: 100%;
-    height: 100%;
-  }
-  .main .advertisement .advertisement-content {
-    margin-bottom: 30px;
-    margin-left: 10px;
-    margin-top: 200px;
-    /* Styles for the ad content title*/
-    /* Styles for the ad content subtitle*/
-    /* Styles for the description of the ad content*/
-  }
-  .main .advertisement .advertisement-content .advertisement-content__title {
-    font-size: 25px;
-  }
-  .main .advertisement .advertisement-content .advertisement-content__subtitle {
-    font-size: 25px;
-  }
-  .main .advertisement .advertisement-content .advertisement-content__description {
-    padding-right: 80px;
-  }
-}/*# sourceMappingURL=main.component.css.map */
+/* Media queries from different mobile devices for the ad section*//*# sourceMappingURL=main.component.css.map */
