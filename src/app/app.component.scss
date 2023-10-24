@@ -1,11 +1,15 @@
+
 /* Styles for the section that contains the header and navigation bar */
 .header-navbar__section{
   display: grid;
-  grid-template-columns: 230px 1fr;
+  grid-template-columns: 1fr;
 }
-@media (min-width: 280px) and (max-width: 912px){
+
+@media (min-width: 768px){
+
+  /* Styles for the section that contains the header and navigation bar */
   .header-navbar__section{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 230px 1fr;
   }
 }

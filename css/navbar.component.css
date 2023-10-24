@@ -24,12 +24,13 @@ body {
   padding: 0px;
 }
 
-/* Styles for the navigation bar */
 .navbar {
   height: 40px;
   /* Styles for the mobile navigation bar container*/
   /* Styles for the navigation menu container in mobile version*/
-  /*Styles for the information section container located within the mobile navigation bar menu */
+  /*Styles for the information section container located within the mobile navigation bar menu in mobile version */
+  /* Styles for the link container on the left side of the navigation bar on the desktop*/
+  /*Styles for the links container on the right side of the navigation bar on desktop */
 }
 .navbar .navbar-mobile {
   display: flex;
@@ -49,7 +50,7 @@ body {
   z-index: 2;
 }
 .navbar .navbar-mobile-menu.slide-in {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   transform: translateX(-100%);
 }
 .navbar .navbar-mobile-menu.slide-in.show {
@@ -90,7 +91,7 @@ body {
   z-index: 2;
 }
 .navbar .navbar-mobile-information.slide-in {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   transform: translateX(-100%);
 }
 .navbar .navbar-mobile-information.slide-in.show {
@@ -124,12 +125,23 @@ body {
 .navbar .navbar-mobile-information .navbar-mobile-information-links .navbar-mobile-information-links__link:hover {
   color: #537FE7;
 }
+.navbar .navbar-left {
+  display: none;
+}
+.navbar .navbar-right {
+  display: none;
+}
 
 @media (min-width: 768px) {
   .navbar {
-    /* Styles for the mobile navigation bar container on desktop*/
-    /* Styles for the navigation menu container on desktop*/
-    /*Styles for the container of the information section located within the navigation bar menu */
+    height: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Styles for the mobile navigation bar container*/
+    /* Styles for the navigation menu container in mobile version*/
+    /*Styles for the container of the information section located within the navigation bar menu in mobile version */
+    /* Styles for the links container on the left side of the navigation bar on the desktop*/
+    /*Styles for the links container on the right side of the navigation bar on desktop */
   }
   .navbar .navbar-mobile {
     display: none;
@@ -139,5 +151,85 @@ body {
   }
   .navbar .navbar-mobile-information {
     display: none;
+  }
+  .navbar .navbar-left {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    z-index: 2;
+  }
+  .navbar .navbar-left .navbar-left__link {
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+    white-space: nowrap;
+    font-size: 15px;
+  }
+  .navbar .navbar-left .navbar-left__link:hover {
+    background-color: #537FE7;
+    border-radius: 10px;
+  }
+  .navbar .navbar-left .navbar-left__link.navbar-left__link--information {
+    position: relative;
+  }
+  .navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 20px;
+    top: 60px;
+    box-shadow: 0px 0px 5px #d0d0dd;
+    width: 240px;
+    height: 180px;
+  }
+  .navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal .navbar-left-modal__icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 25px;
+    bottom: 175px;
+  }
+  .navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal .navbar-left-modal-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 33px;
+    margin-top: 33px;
+    margin-bottom: 40px;
+    gap: 13px;
+  }
+  .navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal .navbar-left-modal-links .navbar-left-modal-links__link {
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .navbar .navbar-left .navbar-left__link.navbar-left__link--information .navbar-left-modal .navbar-left-modal-links .navbar-left-modal-links__link:hover {
+    color: #537FE7;
+  }
+  .navbar .navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+  .navbar .navbar-right .navbar-right__link {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 15px;
+  }
+  .navbar .navbar-right .navbar-right__link:hover {
+    background-color: #537FE7;
+    border-radius: 10px;
+  }
+  .navbar .navbar-right .navbar-right__link .navbar-right__icon {
+    margin: 5px;
   }
 }/*# sourceMappingURL=navbar.component.css.map */
