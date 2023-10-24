@@ -2,6 +2,7 @@
 
 .main{
 
+  /* Styles for the promotional section on mobile devices*/
   .promotional{
     position: relative;
     z-index: 1;
@@ -38,7 +39,7 @@
         margin-top: 15px;
         padding: 10px 60px;
         font-weight: bold;
-        font-size: 17px;
+        font-size: 13px;
 
         &:hover{
           transition: 0.5s ease;
@@ -48,10 +49,76 @@
       }
     }
   }
+
+  /* Styles for the destination container on devices*/
+  .destinations{
+    margin: 10px;
+
+    .destinations__title{
+      font-size: 25px;
+    }
+
+    .destinations-cards{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      .destinations-card{
+        @include set-width-and-height(100%, 200px);
+        position: relative;
+        transition: transform 0.5s;
+
+        &:hover{
+          transform: translateY(-5px);
+        }
+
+        &::before {
+          content: "";
+          @include set-width-and-height(100%, 200px);
+          @include set-background-color-and-border-radius( rgba(0, 0, 0, 0.397), 10px);
+          position: absolute;
+          clip-path: ellipse(99% 97% at 100% 100%);
+        }
+
+        .destinations-card__img{
+          @include set-width-and-height(100%, 100%);
+          object-fit: cover;
+          border-radius: 10px;
+          gap: 10px;
+        }
+
+        .destinations-card__title{
+          @include set-position-font-color-bottom-right-top(absolute,white,0,20px,90px);
+        }
+
+        .destinations-card__text{
+          @include set-position-font-color-bottom-right-top(absolute,white,0px,20px,140px);
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }
 
-@media (min-width: 768px) and (max-width: 992px ) {
+@media (min-width: 768px){
   .main{
+
+    /* Styles for the destination container*/
+    .destinations{
+      margin: 40px 70px;
+
+      .destinations-cards{
+        grid-template-columns: 1fr 2fr 1fr;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .main{
+
+    /* Styles for the promotional section*/
     .promotional{
 
       .promotional__img--desktop{
@@ -64,11 +131,11 @@
       }
 
       .promotional-information{
-        left: 80px;
+        left: 40px;
 
         .promotional-information__title{
           @include set-font-size-and-font-color(55px, white);
-          margin-bottom: 10px;
+          // margin-bottom: 10px;
           margin-top: 0px;
         }
 
@@ -79,27 +146,25 @@
         }
 
         .promotional-information__btn{
-          @include set-background-color-and-border-radius( $promotional-section-button-color, 20px);
-          color: white;
-          border: none;
-          margin-top: 20px;
-          padding: 10px 60px;
-          font-weight: bold;
           font-size: 15px;
-
-          &:hover{
-            transition: 0.5s ease;
-            background-color: rgba(0, 0, 0, 0.356);
-            border: 1px solid white;
-          }
         }
       }
     }
+
+    // .destinations{
+    //   margin: 40px 70px;
+
+    //   .destinations-cards{
+    //     grid-template-columns: 1fr 2fr 1fr;
+    //   }
+    // }
   }
 }
 
 @media (min-width: 993px){
   .main{
+
+    /* Styles for the promotional section*/
     .promotional{
 
       .promotional__img--desktop{
@@ -117,7 +182,6 @@
 
         .promotional-information__title{
           @include set-font-size-and-font-color(55px, white);
-          margin-bottom: 10px;
           margin-top: 0px;
         }
 
@@ -128,19 +192,7 @@
         }
 
         .promotional-information__btn{
-          @include set-background-color-and-border-radius( $promotional-section-button-color, 20px);
-          color: white;
-          border: none;
-          margin-top: 35px;
-          padding: 10px 60px;
-          font-weight: bold;
           font-size: 15px;
-
-          &:hover{
-            transition: 0.5s ease;
-            background-color: rgba(0, 0, 0, 0.356);
-            border: 1px solid white;
-          }
         }
       }
     }
