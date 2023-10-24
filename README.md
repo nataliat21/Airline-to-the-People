@@ -29,3 +29,4 @@ The main purpose of this project is to demonstrate responsive web design techniq
 I thank the following sources and resources for their contribution to this project:
 
 - Angular Framework: This project is based on the Angular framework, which provides powerful tools for frontend web development. *https://angular.io/*
+- w3schools: The responsive design breakpoints for this project were taken from this website. *https://www.w3schools.com/*
