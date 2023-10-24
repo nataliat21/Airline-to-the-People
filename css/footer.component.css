@@ -37,7 +37,7 @@ body {
 .footer .footer-information .footer-information-image {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .footer .footer-information .footer-information-image .footer-information-image__img--desktop {
   display: none;
@@ -132,6 +132,11 @@ body {
     grid-template-columns: 1fr 1fr;
     background-color: #E7E6F6;
     padding: 10px 0px;
+  }
+  .footer .footer-information .footer-information-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .footer .footer-information .footer-information-image .footer-information-image__img--desktop {
     display: block;

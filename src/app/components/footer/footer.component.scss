@@ -9,7 +9,7 @@
     padding: 15px;
 
     .footer-information-image{
-      @include set-flex-align-and-justify-content(center,center);
+      @include set-flex-align-and-justify-content(center,flex-start);
 
       .footer-information-image__img--desktop{
         display: none;
@@ -122,7 +122,7 @@
       padding: 10px 0px;
 
       .footer-information-image{
-
+        @include set-flex-align-and-justify-content(center,center);
         .footer-information-image__img--desktop{
           display: block;
         }
