@@ -138,7 +138,94 @@ body {
   .footer .footer-information .footer-information-image {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  .footer .footer-information .footer-information-image .footer-information-image__img--desktop {
+    display: block;
+  }
+  .footer .footer-information .footer-information-image .footer-information-image__img--mobile {
+    display: none;
+  }
+  .footer .footer-information .footer-information-social-media-mobile {
+    display: none;
+  }
+  .footer .footer-information .footer-information-travel {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-destinations__title,
+  .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-policy__title,
+  .footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-destinations__title,
+  .footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-policy__title {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-destinations__link,
+  .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-policy__link,
+  .footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-destinations__link,
+  .footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-policy__link {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-destinations__link:hover,
+  .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-policy__link:hover,
+  .footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-destinations__link:hover,
+  .footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-policy__link:hover {
+    color: #537FE7;
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container {
+    grid-template-rows: 1fr 1fr;
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-flights .footer-information-travel-flight-media-container-flights__title {
+    font-size: 20px;
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-flights .footer-information-travel-flight-media-container-flights__link {
+    margin-left: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-flights .footer-information-travel-flight-media-container-flights__link:hover {
+    color: #537FE7;
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-social-media-desktop {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-social-media-desktop .footer-information-travel-flight-media-container-social-media-desktop__title {
+    font-size: 18px;
+  }
+  .footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-social-media-desktop .footer-information-travel-flight-media-container-social-media-desktop-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .footer .footer-aditionals {
+    background-color: #F1F0FF;
+  }
+  .footer .footer-aditionals .footer-aditionals__text {
+    padding: 10px 0px 10px 100px;
+    font-size: 13px;
+  }
+}
+@media (min-width: 992px) {
+  .footer {
+    /* Styles for the footer section*/
+    /*Styles for the footer additional information section*/
+  }
+  .footer .footer-information {
+    grid-template-columns: 1fr 1fr;
+    background-color: #E7E6F6;
+    padding: 10px 0px;
+  }
+  .footer .footer-information .footer-information-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 100px;
+    overflow: hidden;
   }
   .footer .footer-information .footer-information-image .footer-information-image__img--desktop {
     display: block;

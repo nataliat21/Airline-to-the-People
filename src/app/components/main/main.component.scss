@@ -64,7 +64,7 @@
       gap: 20px;
 
       .destinations-card{
-        @include set-width-and-height(100%, 200px);
+        @include set-width-and-height(100%, 260px);
         position: relative;
         transition: transform 0.5s;
 
@@ -74,10 +74,10 @@
 
         &::before {
           content: "";
-          @include set-width-and-height(100%, 200px);
+          @include set-width-and-height(100%, 260px);
           @include set-background-color-and-border-radius( rgba(0, 0, 0, 0.397), 10px);
           position: absolute;
-          clip-path: ellipse(99% 97% at 100% 100%);
+          clip-path: ellipse(98% 95% at 100% 100%);
         }
 
         .destinations-card__img{
@@ -88,11 +88,11 @@
         }
 
         .destinations-card__title{
-          @include set-position-font-color-bottom-right-top(absolute,white,0,20px,90px);
+          @include set-position-font-color-bottom-right-top(absolute,white,0,20px,160px);
         }
 
         .destinations-card__text{
-          @include set-position-font-color-bottom-right-top(absolute,white,0px,20px,140px);
+          @include set-position-font-color-bottom-right-top(absolute,white,0px,20px,205px);
           font-size: 18px;
         }
       }
@@ -116,9 +116,9 @@
       margin-top: -1000px;
       margin-left: -180px;
 
-      .advertisement-image__img{
-        @include set-width-and-height(100%, 100%);
-      }
+      // .advertisement-image__img{
+      //   // @include set-width-and-height(100%, 100%);
+      // }
     }
 
     .advertisement-content{
@@ -289,8 +289,8 @@
       }
 
       .promotional-information{
-        top: 35px;
-        left: 40px;
+        top: 50px;
+        left: 60px;
 
         .promotional-information__title{
           @include set-font-size-and-font-color(55px, white);
@@ -305,6 +305,7 @@
 
         .promotional-information__btn{
           font-size: 15px;
+          margin-top: 20px;
         }
       }
     }
@@ -321,7 +322,7 @@
       height: 390px;
 
       .advertisement-image{
-        margin-left: -150px;
+        margin-left: -500px;
         margin-top: -10px;
       }
 
@@ -346,7 +347,7 @@
   }
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) and (max-width: 1199px){
   .main{
 
     /* Styles for the promotional section*/
@@ -386,6 +387,41 @@
 
 @media (min-width: 1200px){
   .main{
+
+    /* Styles for the promotional section*/
+    .promotional{
+
+      .promotional__img--desktop{
+        display: block;
+        @include set-width-and-height(100%, 100%);
+      }
+
+      .promotional__img--mobile{
+        display: none;
+      }
+
+      .promotional-information{
+        top: 100px;
+        left: 80px;
+
+        .promotional-information__title{
+          @include set-font-size-and-font-color(55px, white);
+          margin-top: 0px;
+        }
+
+        .promotional-information__text{
+          @include set-font-size-and-font-color(20px, white);
+          margin: 0px;
+          max-width: 600px;
+        }
+
+        .promotional-information__btn{
+          font-size: 15px;
+          margin-top: 40px
+        }
+      }
+    }
+
     /* Styles for the ad section*/
     .advertisement{
       @include set-flex-align-and-justify-content(center, center);
@@ -394,7 +430,7 @@
       height: 390px;
 
       .advertisement-image{
-        margin-left: -600px;
+        margin-left: -300px;
         margin-top: 30px;
       }
 

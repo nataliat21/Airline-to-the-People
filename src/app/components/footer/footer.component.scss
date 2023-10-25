@@ -125,7 +125,9 @@
       padding: 10px 0px;
 
       .footer-information-image{
-        @include set-flex-align-and-justify-content(center,center);
+        @include set-flex-align-and-justify-content(center,flex-start);
+
+        overflow: hidden;
         .footer-information-image__img--desktop{
           display: block;
         }
@@ -220,4 +222,109 @@
 }
 
 
+@media (min-width: 992px){
+  .footer{
 
+    /* Styles for the footer section*/
+    .footer-information{
+      grid-template-columns: 1fr 1fr;
+      background-color: $footer-background-color;
+      padding: 10px 0px;
+
+      .footer-information-image{
+        @include set-flex-align-and-justify-content(center,flex-start);
+        margin-left: 100px;
+
+        overflow: hidden;
+        .footer-information-image__img--desktop{
+          display: block;
+        }
+
+        .footer-information-image__img--mobile{
+          display: none;
+        }
+      }
+
+      .footer-information-social-media-mobile{
+        display: none;
+      }
+
+      .footer-information-travel{
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 20px;
+        gap: 10px;
+
+        .footer-information-travel-destinations,
+        .footer-information-travel-policy{
+
+          .footer-information-travel-destinations__title,
+          .footer-information-travel-policy__title{
+            font-size: 20px;
+            white-space: nowrap;
+          }
+
+          .footer-information-travel-destinations__link,
+          .footer-information-travel-policy__link{
+
+            font-size: 18px;
+            margin-bottom: 10px;
+
+            &:hover{
+            color: $hover-color-navigation-bar;
+            }
+
+          }
+        }
+
+        .footer-information-travel-flight-media-container{
+          grid-template-rows: 1fr 1fr;
+
+          .footer-information-travel-flight-media-container-flights{
+
+            .footer-information-travel-flight-media-container-flights__title{
+              font-size: 20px;
+            }
+
+            .footer-information-travel-flight-media-container-flights__link{
+              margin-left: 10px;
+              font-size: 18px;
+              margin-bottom: 10px;
+
+              &:hover{
+              color: $hover-color-navigation-bar;
+              }
+            }
+          }
+
+          .footer-information-travel-flight-media-container-social-media-desktop{
+            display: flex;
+            flex-direction: column;
+            padding-right: 10px;
+
+            .footer-information-travel-flight-media-container-social-media-desktop__title{
+              font-size: 18px;
+            }
+
+            .footer-information-travel-flight-media-container-social-media-desktop-icons{
+              display: flex;
+              flex-direction: row;
+              gap: 10px;
+
+            }
+          }
+
+        }
+      }
+    }
+
+    /*Styles for the footer additional information section*/
+    .footer-aditionals{
+      background-color: $footer-background-color-secondary-color;
+
+      .footer-aditionals__text{
+        padding: 10px 0px 10px 100px;
+        font-size: 13px;
+      }
+    }
+  }
+}
