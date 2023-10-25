@@ -18,7 +18,7 @@
 
     .promotional-information{
       position: absolute;
-      top: 35px;
+      top: 100px;
       left: 10px;
       margin: 5px;
 
@@ -112,8 +112,9 @@
     .advertisement-image{
       display: flex;
       justify-content: flex-start;
-      border-radius: 50%;
-      margin-top: -100px;
+      // border-radius: 50%;
+      margin-top: -1000px;
+      margin-left: -180px;
 
       .advertisement-image__img{
         @include set-width-and-height(100%, 100%);
@@ -160,7 +161,7 @@
 
       .promotional-information{
         left: 20px;
-        top: 20px;
+        top: 40px;
 
         .promotional-information__title{
           @include set-font-size-and-font-color(25px, white);
@@ -171,12 +172,14 @@
           @include set-font-size-and-font-color(15px, white);
           margin: 0px;
           max-width: 600px;
+          margin-right: 10px;
         }
 
       }
     }
   }
 }
+
 
 @media (min-width: 320px) and (max-width: 575px) {
   .main{
@@ -185,7 +188,8 @@
       height: 600px;
 
       .advertisement-image{
-        margin-top: -220px;
+        margin-top: -320px;
+        margin-left: -30px;
       }
 
       .advertisement-content{
@@ -204,6 +208,34 @@
 
 @media (min-width: 576px) and (max-width: 767px) {
   .main{
+    /* Styles for the promotional section*/
+    .promotional{
+
+      .promotional__img--desktop{
+        display: none;
+      }
+
+      .promotional__img--mobile{
+        display: block;
+      }
+
+      .promotional-information{
+        left: 20px;
+        top: 300px;
+
+        .promotional-information__title{
+          @include set-font-size-and-font-color(25px, white);
+          margin-top: 0px;
+        }
+
+        .promotional-information__text{
+          @include set-font-size-and-font-color(15px, white);
+          margin: 0px;
+          max-width: 400px;
+        }
+
+      }
+    }
 
     /* Styles for the ad section*/
     .advertisement{
@@ -257,6 +289,7 @@
       }
 
       .promotional-information{
+        top: 35px;
         left: 40px;
 
         .promotional-information__title{
