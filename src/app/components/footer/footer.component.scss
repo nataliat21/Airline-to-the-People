@@ -1,12 +1,14 @@
 @import '../../../styles.scss';
 
 .footer{
+  margin-top: 60px;
+
   /* Styles for the footer section*/
   .footer-information{
     display: grid;
     grid-template-columns: 1fr;
     background-color: $footer-background-color;
-    padding: 15px;
+    padding: 15px 15px 40px 15px;
 
     .footer-information-image{
       @include set-flex-align-and-justify-content(center,flex-start);
@@ -49,7 +51,7 @@
 
         .footer-information-travel-destinations__title,
         .footer-information-travel-policy__title{
-          font-size: 13px;
+          font-size: 15px;
         }
 
         .footer-information-travel-destinations__link,
@@ -57,7 +59,7 @@
           margin-left: 10px;
           @include set-color-font-and-text-decoration($primary-text-color, none);
           margin-bottom: 5px;
-          font-size: 13px;
+          font-size: 14px;
 
           &:hover{
             color: $hover-color-navigation-bar;
@@ -76,14 +78,14 @@
           flex-direction: column;
 
           .footer-information-travel-flight-media-container-flights__title{
-            font-size: 13px;
+            font-size: 15px;
           }
 
           .footer-information-travel-flight-media-container-flights__link{
             margin-left: 10px;
             @include set-color-font-and-text-decoration($primary-text-color, none);
             margin-bottom: 5px;
-            font-size: 13px;
+            font-size: 14px;
 
             &:hover{
             color: $hover-color-navigation-bar;
@@ -106,7 +108,7 @@
     .footer-aditionals__text{
       padding: 5px 10px;
       color:$text-color-footer-aditionals-section;
-      font-size: 10px;
+      font-size: 13px;
       margin-top: 0;
       margin-bottom: 0;
     }
@@ -177,7 +179,6 @@
               margin-left: 10px;
               font-size: 18px;
               margin-bottom: 10px;
-
 
               &:hover{
               color: $hover-color-navigation-bar;

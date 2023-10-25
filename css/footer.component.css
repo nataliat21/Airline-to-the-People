@@ -25,6 +25,7 @@ body {
 }
 
 .footer {
+  margin-top: 60px;
   /* Styles for the footer section*/
   /*Styles for the footer additional information section*/
 }
@@ -32,7 +33,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   background-color: #E7E6F6;
-  padding: 15px;
+  padding: 15px 15px 40px 15px;
 }
 .footer .footer-information .footer-information-image {
   display: flex;
@@ -69,7 +70,7 @@ body {
 .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-policy__title,
 .footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-destinations__title,
 .footer .footer-information .footer-information-travel .footer-information-travel-policy .footer-information-travel-policy__title {
-  font-size: 13px;
+  font-size: 15px;
 }
 .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-destinations__link,
 .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-policy__link,
@@ -79,7 +80,7 @@ body {
   color: black;
   text-decoration: none;
   margin-bottom: 5px;
-  font-size: 13px;
+  font-size: 14px;
 }
 .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-destinations__link:hover,
 .footer .footer-information .footer-information-travel .footer-information-travel-destinations .footer-information-travel-policy__link:hover,
@@ -98,14 +99,14 @@ body {
   flex-direction: column;
 }
 .footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-flights .footer-information-travel-flight-media-container-flights__title {
-  font-size: 13px;
+  font-size: 15px;
 }
 .footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-flights .footer-information-travel-flight-media-container-flights__link {
   margin-left: 10px;
   color: black;
   text-decoration: none;
   margin-bottom: 5px;
-  font-size: 13px;
+  font-size: 14px;
 }
 .footer .footer-information .footer-information-travel .footer-information-travel-flight-media-container .footer-information-travel-flight-media-container-flights .footer-information-travel-flight-media-container-flights__link:hover {
   color: #537FE7;
@@ -119,7 +120,7 @@ body {
 .footer .footer-aditionals .footer-aditionals__text {
   padding: 5px 10px;
   color: #9292A0;
-  font-size: 10px;
+  font-size: 13px;
   margin-top: 0;
   margin-bottom: 0;
 }
