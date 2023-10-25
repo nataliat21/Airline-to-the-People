@@ -140,7 +140,7 @@ body {
   display: flex;
   justify-content: flex-start;
   border-radius: 50%;
-  margin-top: -150px;
+  margin-top: -100px;
 }
 .main .advertisement .advertisement-image .advertisement-image__img {
   width: 100%;
@@ -168,12 +168,12 @@ body {
   color: white;
 }
 
-@media (min-width: 400px) and (max-width: 575px) {
+@media (min-width: 320px) and (max-width: 575px) {
   .main {
     /* Styles for the ad section*/
   }
   .main .advertisement {
-    height: 500px;
+    height: 600px;
   }
   .main .advertisement .advertisement-image {
     margin-top: -220px;
@@ -190,7 +190,7 @@ body {
     /* Styles for the ad section*/
   }
   .main .advertisement {
-    height: 600px;
+    height: 700px;
   }
   .main .advertisement .advertisement-image {
     margin-top: -300px;

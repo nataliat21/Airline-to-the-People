@@ -113,7 +113,7 @@
       display: flex;
       justify-content: flex-start;
       border-radius: 50%;
-      margin-top: -150px;
+      margin-top: -100px;
 
       .advertisement-image__img{
         @include set-width-and-height(100%, 100%);
@@ -145,11 +145,11 @@
   }
 }
 
-@media (min-width: 400px) and (max-width: 575px) {
+@media (min-width: 320px) and (max-width: 575px) {
   .main{
     /* Styles for the ad section*/
     .advertisement{
-      height: 500px;
+      height: 600px;
 
       .advertisement-image{
         margin-top: -220px;
@@ -174,7 +174,7 @@
 
     /* Styles for the ad section*/
     .advertisement{
-      height: 600px;
+      height: 700px;
       .advertisement-image{
         margin-top: -300px;
       }
