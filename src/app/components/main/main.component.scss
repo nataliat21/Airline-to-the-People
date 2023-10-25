@@ -113,7 +113,7 @@
       display: flex;
       justify-content: flex-start;
       border-radius: 50%;
-      margin-top: -150px;
+      margin-top: -100px;
 
       .advertisement-image__img{
         @include set-width-and-height(100%, 100%);
@@ -145,11 +145,44 @@
   }
 }
 
-@media (min-width: 400px) and (max-width: 575px) {
+@media (max-width: 320px){
+  .main{
+    /* Styles for the promotional section*/
+    .promotional{
+
+      .promotional__img--desktop{
+        display: none;
+      }
+
+      .promotional__img--mobile{
+        display: block;
+      }
+
+      .promotional-information{
+        left: 20px;
+        top: 20px;
+
+        .promotional-information__title{
+          @include set-font-size-and-font-color(25px, white);
+          margin-top: 0px;
+        }
+
+        .promotional-information__text{
+          @include set-font-size-and-font-color(15px, white);
+          margin: 0px;
+          max-width: 600px;
+        }
+
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
   .main{
     /* Styles for the ad section*/
     .advertisement{
-      height: 500px;
+      height: 600px;
 
       .advertisement-image{
         margin-top: -220px;
@@ -174,7 +207,7 @@
 
     /* Styles for the ad section*/
     .advertisement{
-      height: 600px;
+      height: 700px;
       .advertisement-image{
         margin-top: -300px;
       }
@@ -228,7 +261,6 @@
 
         .promotional-information__title{
           @include set-font-size-and-font-color(55px, white);
-          // margin-bottom: 10px;
           margin-top: 0px;
         }
 
