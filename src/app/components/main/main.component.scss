@@ -145,6 +145,39 @@
   }
 }
 
+@media (max-width: 320px){
+  .main{
+    /* Styles for the promotional section*/
+    .promotional{
+
+      .promotional__img--desktop{
+        display: none;
+      }
+
+      .promotional__img--mobile{
+        display: block;
+      }
+
+      .promotional-information{
+        left: 20px;
+        top: 20px;
+
+        .promotional-information__title{
+          @include set-font-size-and-font-color(25px, white);
+          margin-top: 0px;
+        }
+
+        .promotional-information__text{
+          @include set-font-size-and-font-color(15px, white);
+          margin: 0px;
+          max-width: 600px;
+        }
+
+      }
+    }
+  }
+}
+
 @media (min-width: 320px) and (max-width: 575px) {
   .main{
     /* Styles for the ad section*/
@@ -228,7 +261,6 @@
 
         .promotional-information__title{
           @include set-font-size-and-font-color(55px, white);
-          // margin-bottom: 10px;
           margin-top: 0px;
         }
 

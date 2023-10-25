@@ -168,6 +168,32 @@ body {
   color: white;
 }
 
+@media (max-width: 320px) {
+  .main {
+    /* Styles for the promotional section*/
+  }
+  .main .promotional .promotional__img--desktop {
+    display: none;
+  }
+  .main .promotional .promotional__img--mobile {
+    display: block;
+  }
+  .main .promotional .promotional-information {
+    left: 20px;
+    top: 20px;
+  }
+  .main .promotional .promotional-information .promotional-information__title {
+    font-size: 25px;
+    color: white;
+    margin-top: 0px;
+  }
+  .main .promotional .promotional-information .promotional-information__text {
+    font-size: 15px;
+    color: white;
+    margin: 0px;
+    max-width: 600px;
+  }
+}
 @media (min-width: 320px) and (max-width: 575px) {
   .main {
     /* Styles for the ad section*/
