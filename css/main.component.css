@@ -132,19 +132,28 @@ body {
   margin: 10px;
   background: linear-gradient(to bottom, black, #537FE7);
   border-radius: 15px;
-  height: 500px;
+  height: auto;
   overflow: hidden;
-  position: relative;
 }
 .main .advertisement .advertisement-image {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: -1000px;
-  margin-left: -180px;
+  margin-top: -270px;
+  position: relative;
+}
+.main .advertisement .advertisement-image .advertisement-image__img {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.main .advertisement .advertisement-image .advertisement-image__img--tablets {
+  display: none;
+}
+.main .advertisement .advertisement-image .advertisement-image__img--desktop {
+  display: none;
 }
 .main .advertisement .advertisement-content {
   margin-left: 15px;
-  margin-top: 10px;
+  margin-top: 460px;
 }
 .main .advertisement .advertisement-content .advertisement-content__title {
   font-size: 30px;
@@ -191,28 +200,9 @@ body {
     margin-right: 10px;
   }
 }
-@media (min-width: 320px) and (max-width: 575px) {
-  .main {
-    /* Styles for the ad section*/
-  }
-  .main .advertisement {
-    height: 600px;
-  }
-  .main .advertisement .advertisement-image {
-    margin-top: -320px;
-    margin-left: -30px;
-  }
-  .main .advertisement .advertisement-content .advertisement-content__description {
-    margin: 0px;
-    margin-bottom: 100px;
-    max-width: 450px;
-    color: white;
-  }
-}
 @media (min-width: 576px) and (max-width: 767px) {
   .main {
     /* Styles for the promotional section*/
-    /* Styles for the ad section*/
   }
   .main .promotional .promotional__img--desktop {
     display: none;
@@ -235,18 +225,6 @@ body {
     margin: 0px;
     max-width: 400px;
   }
-  .main .advertisement {
-    height: 700px;
-  }
-  .main .advertisement .advertisement-image {
-    margin-top: -300px;
-  }
-  .main .advertisement .advertisement-content .advertisement-content__description {
-    margin: 0px;
-    margin-bottom: 100px;
-    max-width: 550px;
-    color: white;
-  }
 }
 @media (min-width: 768px) {
   .main {
@@ -256,7 +234,7 @@ body {
     margin: 40px 70px;
   }
   .main .destinations .destinations-cards {
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -298,14 +276,24 @@ body {
   .main .advertisement {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 20px 70px;
     background: linear-gradient(to right, black, #537FE7);
     height: 390px;
   }
   .main .advertisement .advertisement-image {
-    margin-left: -500px;
-    margin-top: -10px;
+    margin-left: -150px;
+    margin-top: -2px;
+    position: static;
+  }
+  .main .advertisement .advertisement-image .advertisement-image__img {
+    display: none;
+  }
+  .main .advertisement .advertisement-image .advertisement-image__img--tablets {
+    display: block;
+  }
+  .main .advertisement .advertisement-image .advertisement-image__img--desktop {
+    display: none;
   }
   .main .advertisement .advertisement-content {
     margin-left: 70px;
@@ -391,14 +379,24 @@ body {
   .main .advertisement {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 20px 70px;
     background: linear-gradient(to right, black, #537FE7);
     height: 390px;
   }
   .main .advertisement .advertisement-image {
     margin-left: -300px;
-    margin-top: 30px;
+    margin-top: -2px;
+    position: static;
+  }
+  .main .advertisement .advertisement-image .advertisement-image__img {
+    display: none;
+  }
+  .main .advertisement .advertisement-image .advertisement-image__img--tablets {
+    display: none;
+  }
+  .main .advertisement .advertisement-image .advertisement-image__img--desktop {
+    display: block;
   }
   .main .advertisement .advertisement-content {
     margin-left: 70px;
