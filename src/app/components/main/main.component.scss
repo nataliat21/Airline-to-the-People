@@ -64,7 +64,7 @@
       gap: 20px;
 
       .destinations-card{
-        @include set-width-and-height(100%, 260px);
+        @include set-width-and-height(100%, 230px);
         position: relative;
         transition: transform 0.5s;
 
@@ -74,7 +74,7 @@
 
         &::before {
           content: "";
-          @include set-width-and-height(100%, 260px);
+          @include set-width-and-height(100%, 230px);
           @include set-background-color-and-border-radius( rgba(0, 0, 0, 0.397), 10px);
           position: absolute;
           clip-path: ellipse(98% 95% at 100% 100%);
@@ -88,11 +88,11 @@
         }
 
         .destinations-card__title{
-          @include set-position-font-color-bottom-right-top(absolute,white,0,20px,160px);
+          @include set-position-font-color-bottom-right-top(absolute,white,0,20px,120px);
         }
 
         .destinations-card__text{
-          @include set-position-font-color-bottom-right-top(absolute,white,0px,20px,205px);
+          @include set-position-font-color-bottom-right-top(absolute,white,0px,20px,170px);
           font-size: 18px;
         }
       }
@@ -115,6 +115,7 @@
       .advertisement-image__img{
         position: absolute;
         top: -200px;
+        // top: -300px;
         left: 50%;
         transform: translate(-50%);
       }
@@ -187,7 +188,7 @@
   }
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 991px) {
   .main{
     /* Styles for the promotional section*/
     .promotional{
@@ -221,7 +222,7 @@
 
 }
 
-@media (min-width: 768px){
+@media (min-width: 992px){
   .main{
 
     /* Styles for the destinations section*/
@@ -229,53 +230,14 @@
       margin: 40px 70px;
 
       .destinations-cards{
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
       }
     }
 
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .main{
-
-    /* Styles for the promotional section*/
-    .promotional{
-
-      .promotional__img--desktop{
-        display: block;
-        @include set-width-and-height(100%, 100%);
-      }
-
-      .promotional__img--mobile{
-        display: none;
-      }
-
-      .promotional-information{
-        top: 50px;
-        left: 60px;
-
-        .promotional-information__title{
-          @include set-font-size-and-font-color(55px, white);
-          margin-top: 0px;
-        }
-
-        .promotional-information__text{
-          @include set-font-size-and-font-color(20px, white);
-          margin: 0px;
-          max-width: 600px;
-        }
-
-        .promotional-information__btn{
-          font-size: 15px;
-          margin-top: 20px;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1199px){
+@media (min-width: 992px) and (max-width: 1199px){
   .main{
     /* Styles for the ad section*/
     .advertisement{
